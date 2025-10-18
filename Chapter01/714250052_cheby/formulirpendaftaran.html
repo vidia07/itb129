@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulir Pendaftaran Keren</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  .container {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 450px;
+  }
+  h2 { text-align: center; color: #333; margin-bottom: 20px; }
+  label { display: block; margin-top: 15px; color: #555; }
+  input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: 0.3s;
+  }
+  input:focus, select:focus { border-color: #fda085; outline: none; }
+  button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover { background: linear-gradient(135deg, #fda085, #f6d365); }
+  .error { color: red; font-size: 0.9em; display: none; }
+  .link { text-align: center; margin-top: 15px; }
+  .link a { color: #fda085; text-decoration: none; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Pendaftaran</h2>
+  <form id="daftarForm">
+
+    <label>Nama:</label>
+    <input type="text" id="nama" placeholder="Masukkan nama">
+    <div class="error" id="errorNama">Nama wajib diisi!</div>
+
+    <label>Email:</label>
+    <input type="email" id="email" placeholder="Masukkan email">
+    <div class="error" id="errorEmail">Email tidak valid!</div>
+
+    <label>Nomor Telepon:</label>
+    <input type="tel" id="telp" placeholder="Masukkan nomor telepon">
+    <div class="error" id="errorTelp">Nomor telepon wajib diisi!</div>
+
+    <label>Jenis Kelamin:</label>
+    <select id="jk">
+      <option value="">Pilih</option>
+      <option value="Pria">Pria</option>
+      <option value="Wanita">Wanita</option>
+    </select>
+    <div class="error" id="errorJK">Jenis kelamin wajib dipilih!</div>
+
+    <label>Jurusan:</label>
+    <input type="text" id="jurusan" placeholder="Masukkan jurusan">
+    <div class="error" id="errorJurusan">Jurusan wajib diisi!</div>
+
+    <button type="submit">Daftar</button>
+  </form>
+  <div class="link">
+    <a href="#" id="lihatDaftar">Lihat Daftar Pendaftar</a>
+  </div>
+</div>
+
+<script>
+const form = document.getElementById('daftarForm');
+const lihatDaftar = document.getElementById('lihatDaftar');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  let valid = true;
+  document.querySelectorAll('.error').forEach(err => err.style.display = 'none');
+
+  const nama = document.getElementById('nama').value.trim();
+  if (!nama) { document.getElementById('errorNama').style.display = 'block'; valid = false; }
+
+  const email = document.getElementById('email').value.trim();
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if (!email.match(emailPattern)) { document.getElementById('errorEmail').style.display = 'block'; valid = false; }
+
+  const telp = document.getElementById('telp').value.trim();
+  if (!telp) { document.getElementById('errorTelp').style.display = 'block'; valid = false; }
+
+  const jk = document.getElementById('jk').value;
+  if (!jk) { document.getElementById('errorJK').style.display = 'block'; valid = false; }
+
+  const jurusan = document.getElementById('jurusan').value.trim();
+  if (!jurusan) { document.getElementById('errorJurusan').style.display = 'block'; valid = false; }
+
+  if (valid) {
+    let daftar = JSON.parse(localStorage.getItem('daftarPendaftar') || '[]');
+    daftar.push({ nama, email, telp, jk, jurusan });
+    localStorage.setItem('daftarPendaftar', JSON.stringify(daftar));
+    alert('Pendaftaran berhasil! Data tersimpan sementara di browser.');
+    form.reset();
+  }
+});
+
+// Link untuk lihat daftar pendaftar
+lihatDaftar.addEventListener('click', function(e) {
+  e.preventDefault();
+  let daftar = JSON.parse(localStorage.getItem('daftarPendaftar') || '[]');
+  if (daftar.length === 0) { alert('Belum ada pendaftar.'); return; }
+  let html = daftar.map((d, i) => 
+    `${i+1}. ${d.nama} | ${d.email} | ${d.telp} | ${d.jk} | ${d.jurusan}`).join('\n');
+  alert("Daftar Pendaftar:\n\n" + html);
+});
+</script>
+
+</body>
+</html>
+
+
