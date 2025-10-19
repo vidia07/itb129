@@ -101,6 +101,52 @@
         flex-shrink: 0;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
       }
+      .aboutme {
+        background-color: #3a3a3a;
+        min-height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 50px;
+      }
+      .about-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        flex-wrap: wrap;
+        color: rgb(255, 255, 255);
+        max-width: 1000px;
+      }
+      .about-container h1 {
+        font-size: 64px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        margin: 0;
+      }
+      .about-container h1 span {
+        color: #ffcc33;
+      }
+      .about-container p {
+        max-width: 500px;
+        font-size: 18px;
+        line-height: 1.6;
+        font-weight: 500;
+        margin: 0;
+      }
+      @media (max-width: 768px) {
+        .about-container {
+          flex-direction: column;
+          text-align: center;
+          gap: 40px;
+        }
+        .about-container h1 {
+          font-size: 48px;
+        }
+        .about-container p {
+          font-size: 16px;
+        }
+      }
       .project-section {
         background-color: #4a4a4a;
         padding: 60px 40px;
@@ -210,6 +256,9 @@
         header {
           padding: 20px 30px;
         }
+        .about-text {
+          text-align: center;
+        }
         .hero {
           flex-direction: column;
           text-align: center;
@@ -231,6 +280,7 @@
       <h1>ZakNong</h1>
       <nav>
         <a href="#home">Home</a>
+        <a href="#aboutme">About Me</a>
         <a href="#project">Project</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -240,7 +290,7 @@
         <h2>HI, IT'S ME ---</h2>
         <h1>AHMAD <span class="highlight">ZAKKY</span> NURFAUZAN</h1>
         <p>
-          A Graphic Desainer, Photographer, Media Editor, and Programmer located
+          A Graphic Designer, Photographer, Media Editor, and Programmer located
           in Indonesia
         </p>
         <a
@@ -250,6 +300,16 @@
         >
       </div>
       <div class="profile-pic"></div>
+    </section>
+    <section class="aboutme" id="aboutme">
+      <div class="about-container">
+        <h1>ABOUT <span>ME</span></h1>
+        <p>
+          I'm a person who's passionate about new things and will delve deeper
+          into them. I'm also adaptable to any environment. Oh, and of course,
+          I'm friendly and like to joke around, so don't be too harsh on me!
+        </p>
+      </div>
     </section>
     <section class="project-section" id="project">
       <h2>PROJECT</h2>
