@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pendaftaran Siswa Baru</title>
+  </head>
+  <body>
+    <h2>
+      PERPUSTAKAAN UNIVERSITAS LOGISTIK<br />DAN BISNIS INTERNASIONAL<br /><br />FORMULIR
+      PENDAFTARAN ANGGOTA PERPUSTAKAAN
+    </h2>
+
+    <form>
+      <label>Nama Lengkap</label>
+      <input type="text" name="nama" required /> <br />
+
+      <label>Alamat</label><br />
+      <textarea name="alamat" cols="30" rows="10" required></textarea> <br />
+
+      <label>Tanggal Lahir</label>
+      <select name="bulan">
+        <option value="">Bulan</option>
+        <option>Januari</option>
+        <option>Februari</option>
+        <option>Maret</option>
+        <option>April</option>
+        <option>Mei</option>
+        <option>Juni</option>
+        <option>Juli</option>
+        <option>Agustus</option>
+        <option>September</option>
+        <option>Oktober</option>
+        <option>November</option>
+        <option>Desember</option>
+      </select>
+      <select name="tanggal">
+        <option value="">Tanggal</option>
+        <script>
+          for (let i = 1; i <= 31; i++) {
+            document.write(`<option>${i}</option>`);
+          }
+        </script>
+      </select>
+      <select name="tahun">
+        <option value="">Tahun</option>
+        <script>
+          for (let i = 2000; i <= 2025; i++) {
+            document.write(`<option>${i}</option>`);
+          }
+        </script>
+      </select>
+      <br />
+      <br />
+
+      <label>E-mail</label>
+      <input type="email" name="email" required /> <br />
+      <br />
+
+      <label>Nomor HP</label>
+      <input type="text" name="hp" required />
+      <br />
+      <br />
+
+      <input type="submit" value="Kirim Formulir" />
+    </form>
+  </body>
+</html>
