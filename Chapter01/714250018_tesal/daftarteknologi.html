@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tabel Produk</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin: 24px;
+      background: #f7f7fb;
+      color: #111827;
+    }
+
+    h2 {
+      margin-bottom: 12px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      background: white;
+      padding: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 480px;
+    }
+
+    thead th {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 2px solid #eef2f7;
+      font-weight: 600;
+    }
+
+    tbody td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    a {
+      color: #0b67ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* kecilkan font pada kolom nomor */
+    .col-no {
+      width: 56px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    @media (max-width: 520px) {
+      thead th, tbody td { padding: 8px; }
+      .col-no { width: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <h2>Daftar Produk Teknologi</h2>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th class="col-no">No</th>
+          <th>Nama Produk</th>
+          <th>Harga</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-no">1</td>
+          <td><a href="product1.html">Smartphone Quantum X</a></td>
+          <td>Rp 5.999.000</td>
+        </tr>
+
+        <tr>
+          <td class="col-no">2</td>
+          <td><a href="product2.html">Laptop Infinity Z</a></td>
+          <td>Rp 12.499.000</td>
+        </tr>
+
+        <!-- contoh baris kosong / placeholder -->
+        <tr>
+          <td class="col-no">3</td>
+          <td><a href="#">Produk Baru (coming soon)</a></td>
+          <td>-</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
