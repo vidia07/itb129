@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en"
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1,0" />
-    <title>Latihan Blog Program</title>
-    <link rel="stylesheet" href="styles.ccs"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Blog Programming</title>
+    <link rel="stylesheet" href="styles.ccs" />
     <script>
         function t() {
-          var e = document.getElemenId("comment");
+          var e = document.getElementById("comments");
           e.style.display = "none" === e.style.display ? "block" : "none";
         }
     </script>
@@ -16,9 +16,9 @@
     <h2>Judul Artikel</h2>
     <p>Isi artikel tentang teknologi terbaru.</p>
     <button onclick="t()">Komentar</button>
-    <div id="'comments" style="display: none">
+    <div id="comments" style="display: none">
        <h3>komentar</h3>
-       <p>komentar 1: Artikel ini informatif 1!</p>
+       <p>komentar 1: Artikel ini informatif!</p>
        <p>komentar 2: Saya suka artikel ini!</p>
     </div>
     </body>
