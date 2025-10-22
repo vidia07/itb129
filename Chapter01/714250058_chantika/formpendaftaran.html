@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Tambah Data</h3>
+
+    <Form action="proses_tambah.php" method="post">
+        <table>
+        Nama Lengkap :<br>
+        <input type="text" name="nama_lengkap" placeholder="Masukkan Nama Lengkap" required><br>
+
+        NPM : <br>
+        <input type="text" name="npm" placeholder="Masukkan NPM" required><br>
+
+        Tanggal Lahir : <br>
+        <input type="date" name="tanggal_lahir" required><br>
+
+        Jenis Kelamin<br>
+        <input type="radio" name="jenis_kelamin" value="Laki-laki" required> Laki-laki<br>
+        <input type="radio" name="jenis_kelamin" value="Perempuan" required> Perempuan<br>
+
+        Kelas : <br>
+        <input type="text" name="kelas" placeholder="Masukkan Kelas" required><br>
+
+        Alamat : <br>
+        <br><textarea></textarea><br>
+
+        <input type="submit" value="Simpan Data">
+        <input type="reset" value="reset">
+        <input type="button" value="Kembali" onclick="history.back()">
+        </table>
+    </Form>
+</body>
+</html>
