@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function t() {
+            var e = document.getElementById("comments");
+            e.style.display = "none" === e.style.display ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <h2>Orang hitam membeli handphone terbaru</h2>
+    <p>Orang Hitam baru saja membeli handphone terbaru dengan fitur canggih dan desain modern. Handphone ini menawarkan performa tinggi, kamera berkualitas, dan baterai tahan lama yang cocok untuk kebutuhan sehari-hari.</p>
+    <button onclick="t()">Komentar</button>
+    <div id="comments" style="display: none">
+        <h3>Komentar</h3>
+        <p>OrangHitam123: Artikel ini sungguh bermanfaat</p>
+        <p>OrangPutih890: Lah itu kan HP gua</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+</head>
+<body>
+    <h2>Formulir Pendaftaran</h2>
+    <form action="submit-form" method="POST">
+        <div>
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <br>
+        <div>
+            <label for="tanggal_lahir">tanggal lahir</label>
+            input type="date" id="tanggal_lahir" name="tanggal_lahir">
+        </div>
+        <br>
+        <div>
+            <label for="jenis kelamin">jenis kelamin</label>
+            <select id="jenis_kelamin" name="jenis_kelamin">
+                <option value="laki-laki">laki-laki</option>
+                <option value="perempuan">perempuan</option>
+                <option value="lainnya">lainnya</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="checkbox"id="setuju"_syarat_dan_ketentuan" name="setuju_syarat_dan_ketentuan" required>
+        </div>
+        <br>
+        <div>
+        <button type="submit">daftar sekarang</button>
+        <button type="reset">reset</button>
+        </div>
+    </form>
+</body>
+</html>

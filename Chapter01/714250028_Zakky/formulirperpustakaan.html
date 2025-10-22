@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pendaftaran Siswa Baru</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffa952;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 90%;
+        max-width: 600px;
+        margin: 30px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-top: 15px;
+        color: #333;
+      }
+      input[type="text"],
+      input[type="email"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+      textarea {
+        height: 80px;
+        resize: vertical;
+      }
+      .row {
+        display: flex;
+        gap: 10px;
+      }
+      .row select,
+      .row input {
+        flex: 1;
+      }
+      input[type="submit"] {
+        margin-top: 25px;
+        width: 100%;
+        padding: 12px;
+        background-color: #ff8a15;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #ff8000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>
+        PERPUSTAKAAN UNIVERSITAS LOGISTIK<br />DAN BISNIS INTERNASIONAL<br /><br />FORMULIR
+        PENDAFTARAN ANGGOTA PERPUSTAKAAN
+      </h2>
+
+      <form>
+        <label>Nama Lengkap</label>
+        <input
+          type="text"
+          name="nama"
+          placeholder="Masukkan nama lengkap"
+          required
+        />
+
+        <label>Alamat</label>
+        <textarea
+          name="alamat"
+          placeholder="Tuliskan alamat lengkap Anda"
+          required
+        ></textarea>
+
+        <label>Tanggal Lahir</label>
+        <div class="row">
+          <select name="bulan">
+            <option value="">Bulan</option>
+            <option>Januari</option>
+            <option>Februari</option>
+            <option>Maret</option>
+            <option>April</option>
+            <option>Mei</option>
+            <option>Juni</option>
+            <option>Juli</option>
+            <option>Agustus</option>
+            <option>September</option>
+            <option>Oktober</option>
+            <option>November</option>
+            <option>Desember</option>
+          </select>
+          <select name="tanggal">
+            <option value="">Tanggal</option>
+            <script>
+              for (let i = 1; i <= 31; i++) {
+                document.write(`<option>${i}</option>`);
+              }
+            </script>
+          </select>
+          <select name="tahun">
+            <option value="">Tahun</option>
+            <script>
+              for (let i = 2000; i <= 2025; i++) {
+                document.write(`<option>${i}</option>`);
+              }
+            </script>
+          </select>
+        </div>
+
+        <label>E-mail</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="contoh: nama@email.com"
+          required
+        />
+
+        <label>Nomor HP</label>
+        <input
+          type="text"
+          name="hp"
+          placeholder="Masukkan nomor HP aktif"
+          required
+        />
+
+        <input type="submit" value="Kirim Formulir" />
+      </form>
+    </div>
+  </body>
+</html>

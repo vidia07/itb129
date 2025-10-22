@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulir Pendaftaran Mahasiswa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #2563eb;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #2563eb;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Formulir Pendaftaran Mahasiswa</h1>
+    <form>
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap">
+
+      <label for="nim">Nim</label>
+      <input type="text" id="nim" name="nim" required placeholder="Masukkan NIM">
+
+      <label for="prodi">Program Studi</label>
+      <select id="prodi" name="prodi">
+        <option>Teknik Informatika</option>
+        <option>Sistem Informasi</option>
+        <option>Teknik Komputer</option>
+        <option>Bisnis Digital</option>
+        <option>Manajemen Logistik</option>
+        <option>Sains Data</option>
+        <option>Manajemen Rekayasa</option>
+        <option>Akuntasi Keuangan</option>
+        <option>Administrasi Logistik</option>
+        <option>Manajemen Perusahaan</option>
+        <option>Manajemen Pemasaran</option>
+        <option>Manajemen Transportasi</option>
+      </select>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="email@contoh.com">
+
+      <button type="submit">Daftar</button>
+    </form>
+  </div>
+</body>
+</html>
