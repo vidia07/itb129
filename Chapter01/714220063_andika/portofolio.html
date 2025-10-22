@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      scroll-behavior: smooth;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile {
+      text-align: center;
+      position: relative;
+      background-color: #F0F5FF;
+    }
+
+    .profile h2 {
+      font-size: 24px;
+      font-weight: 400;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .profile h1 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #9b8cf3;
+      margin-bottom: 12px;
+    }
+
+    .profile p {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .icon img {
+      width: 28px;
+      height: 28px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .icon img:hover {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+
+    @keyframes scroll_1 {
+      0%   { transform: translateY(0); }
+      25%  { transform: translateY(-0.6em); }
+      50%  { transform: translateY(0); }
+      75%  { transform: translateY(0.6em); }
+      100% { transform: translateY(0); }
+    }
+
+    .scroll-icon {
+      display: block;
+      position: relative;
+      height: 3em;
+      width: 1.5em;
+      border: 0.25em solid #9b8cf3;
+      border-radius: 1em;
+      margin-top: 30px;
+    }
+
+    .scroll-icon__wheel-outer {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: .6em;
+      height: 1em;
+      width: .4em;
+      margin-left: -.2em;
+      border-radius: .4em;
+      overflow: hidden;
+    }
+
+    .scroll-icon__wheel-inner {
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-radius: inherit;
+      background: #9b8cf3;
+      animation: scroll_1 2.75s ease-in-out infinite;
+    }
+
+    .skills {
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .skills h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #9b8cf3;
+      margin-bottom: 60px;
+    }
+
+    .skill-icons {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 24px;
+      justify-items: center;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .skill-icons img {
+      width: 64px;
+      height: 64px;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 900px) {
+      .skill-icons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .profile h1 {
+        font-size: 36px;
+      }
+
+      .skills h2 {
+        font-size: 28px;
+      }
+
+      .skill-icons {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .skill-icons img {
+        width: 56px;
+        height: 56px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="profile">
+    <h2>Hello, I Am</h2>
+    <h1>Andika MF</h1>
+    <p>I’m an Informatics Engineering student.</p>
+    <a href="https://github.com/nekowawolf/" target="_blank" class="icon">
+      <img src="https://cdn-icons-png.flaticon.com/256/25/25231.png" alt="GitHub Logo">
+    </a>
+
+    <span class="scroll-icon">
+      <span class="scroll-icon__wheel-outer">
+        <span class="scroll-icon__wheel-inner"></span>
+      </span>
+    </span>
+  </section>
+
+  <section class="skills">
+    <h2>My Skill</h2>
+    <div class="skill-icons">
+      <img src="https://github.com/LelouchFR/skill-icons/raw/main/assets/nextjs-auto.svg" alt="">
+      <img src="https://github.com/LelouchFR/skill-icons/raw/main/assets/mongodb.svg" alt="">
+      <img src="https://github.com/LelouchFR/skill-icons/raw/main/assets/typescript.svg" alt="">
+      <img src="https://github.com/LelouchFR/skill-icons/raw/main/assets/golang.svg" alt="">
+      <img src="https://github.com/LelouchFR/skill-icons/raw/main/assets/postman.svg" alt="">
+      <img src="https://github.com/LelouchFR/skill-icons/raw/main/assets/postgresql-auto.svg" alt="">
+      <img src="https://github.com/LelouchFR/skill-icons/raw/main/assets/figma-auto.svg" alt="">
+      <img src="https://github.com/LelouchFR/skill-icons/raw/main/assets/mysql-auto.svg" alt="">
+      <img src="https://github.com/LelouchFR/skill-icons/raw/main/assets/git-auto.svg" alt="">
+      <img src="https://github.com/LelouchFR/skill-icons/raw/main/assets/dart-auto.svg" alt="">
+      <img src="https://github.com/LelouchFR/skill-icons/raw/main/assets/npm-auto.svg" alt="">
+      <img src="https://github.com/LelouchFR/skill-icons/raw/main/assets/tailwindcss-auto.svg" alt="">
+      <img src="https://github.com/LelouchFR/skill-icons/raw/main/assets/html.svg" alt="">
+      <img src="https://github.com/LelouchFR/skill-icons/raw/main/assets/python-auto.svg" alt="">
+    </div>
+  </section>
+
+</body>
+</html>
