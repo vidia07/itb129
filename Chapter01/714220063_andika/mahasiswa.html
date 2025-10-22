@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Mahasiswa</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-top: 30px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 600px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #333;
+    }
+
+    input, select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #2563eb;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #1e40af;
+    }
+
+    .table-container {
+      width: 90%;
+      max-width: 600px;
+      margin: 20px auto 40px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #2563eb;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    tr:hover {
+      background-color: #f1f5f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulir Pendaftaran Mahasiswa</h1>
+
+  <div class="container">
+    <form>
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+
+      <label for="npm">NPM</label>
+      <input type="text" id="npm" name="npm" placeholder="Masukkan NPM" required>
+
+      <label for="kelas">Kelas</label>
+      <input type="text" id="kelas" name="kelas" placeholder="Masukkan kelas (misal: TI-3A)" required>
+
+      <label for="prodi">Program Studi</label>
+      <select id="prodi" name="prodi" required>
+        <option value="">-- Pilih Program Studi --</option>
+        <option>Teknik Informatika</option>
+        <option>Sistem Informasi</option>
+        <option>Teknik Komputer</option>
+        <option>Manajemen Informatika</option>
+      </select>
+
+      <button type="submit">Daftar</button>
+    </form>
+  </div>
+
+  <h1>Data Mahasiswa Terdaftar</h1>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nama</th>
+          <th>NPM</th>
+          <th>Kelas</th>
+          <th>Prodi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Test</td>
+          <td>714300000</td>
+          <td>3A</td>
+          <td>Teknik Informatika</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Test2</td>
+          <td>714300001</td>
+          <td>2B</td>
+          <td>Teknik Informatika</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Test3</td>
+          <td>714300002</td>
+          <td>2C</td>
+          <td>Teknik Informatika</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
