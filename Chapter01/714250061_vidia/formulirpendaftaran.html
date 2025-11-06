@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Mahasiswa</title>
+</head>
+<body>
+  <h1>Formulir Pendaftaran Mahasiswa Baru</h1>
+
+  <form action="#" method="post">
+    <table cellpadding="5">
+      <tr>
+        <td><label for="nama">Nama Lengkap</label></td>
+        <td><input type="text" id="nama" name="nama" required></td>
+      </tr>
+
+      <tr>
+        <td><label for="npm">NPM</label></td>
+        <td><input type="text" id="npm" name="npm" required></td>
+      </tr>
+
+      <tr>
+        <td><label for="email">Email</label></td>
+        <td><input type="email" id="email" name="email" required></td>
+      </tr>
+
+      <tr>
+        <td><label for="prodi">Program Studi</label></td>
+        <td>
+          <select id="prodi" name="prodi" required>
+            <option value="">-- Pilih Program Studi --</option>
+            <option value="Teknik Informatika">Teknik Informatika</option>
+            <option value="Sistem Informasi">Sistem Informasi</option>
+            <option value="Teknologi Informasi">Teknologi Informasi</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="kelas">Kelas</label></td>
+        <td>
+          <input type="radio" name="kelas" value="1A" required> 1A
+          <input type="radio" name="kelas" value="1B"> 1B
+          <input type="radio" name="kelas" value="1C"> 1C
+        </td>
+      </tr>
+
+      <tr>
+        <td><label for="asal">Asal Daerah</label></td>
+        <td><input type="text" id="asal" name="asal"></td>
+      </tr>
+
+      <tr>
+        <td><label for="alamat">Alamat Lengkap</label></td>
+        <td><textarea id="alamat" name="alamat" rows="4" cols="30"></textarea></td>
+      </tr>
+
+      <tr>
+        <td><label for="tanggal">Tanggal Lahir</label></td>
+        <td><input type="date" id="tanggal" name="tanggal"></td>
+      </tr>
+
+    
+
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="Daftar">
+          <input type="reset" value="Batal">
+        </td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>
