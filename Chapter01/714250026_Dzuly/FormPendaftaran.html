@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Form Pendaftaran UKM by Dzuly</title>
+  <style>
+    :root{--accent:#0b5ed7;--bg:#f7fafc;--card:#fff}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);margin:0;padding:24px;color:#222}
+    .container{max-width:820px;margin:0 auto}
+    h1{font-size:1.5rem;margin:0 0 12px;text-align:center}
+    form{background:var(--card);padding:18px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    label{display:block;font-size:.9rem;margin-bottom:6px}
+    input[type="text"],input[type="email"],input[type="tel"],select,textarea,input[type="date"]{
+      width:100%;padding:8px;border:1px solid #d7dbe0;border-radius:6px;font-size:.95rem;box-sizing:border-box
+    }
+    textarea{resize:vertical;min-height:100px}
+    .full{grid-column:1/-1}
+    .muted{font-size:.85rem;color:#555;margin-top:6px}
+    .actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+    button{background:var(--accent);color:#fff;border:0;padding:10px 14px;border-radius:6px;cursor:pointer}
+    button.secondary{background:#e6eefc;color:var(--accent)}
+    .photo-preview{height:80px;width:80px;border-radius:6px;object-fit:cover;border:1px solid #e4e7eb}
+    @media (max-width:720px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Pendaftaran Anggota Baru - Unit Kegiatan Mahasiswa (UKM) by Dzuly</h1>
+
+    <form id="ukmForm" action="#" method="post" enctype="multipart/form-data" novalidate>
+      <div class="grid">
+        <div>
+          <label for="fullname">Nama Lengkap <span aria-hidden="true">*</span></label>
+          <input id="fullname" name="fullname" type="text" required placeholder="Nama sesuai KTP / Kartu Mahasiswa" />
+        </div>
+
+        <div>
+          <label for="nim">NIM <span aria-hidden="true">*</span></label>
+          <input id="nim" name="nim" type="text" pattern="\d{9,12}" title="Masukkan NIM (9-12 digit)" required placeholder="Contoh: 714250026" />
+        </div>
+
+        <div>
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" required placeholder="nama@domain.com" />
+        </div>
+
+        <div>
+          <label for="phone">No. HP</label>
+          <input id="phone" name="phone" type="tel" pattern="^[0-9+\-\s]{6,20}$" placeholder="08xxxxxxxxxx" />
+        </div>
+
+        <div>
+          <label for="faculty">Fakultas / Unit</label>
+          <input id="faculty" name="faculty" type="text" placeholder="Contoh: Teknik Informatika" />
+        </div>
+
+        <div>
+          <label for="program">Program Studi</label>
+          <input id="program" name="program" type="text" placeholder="Contoh: D4 Teknik Informatika" />
+        </div>
+
+        <div>
+          <label for="birth">Tanggal Lahir</label>
+          <input id="birth" name="birth" type="date" />
+        </div>
+
+        <div>
+          <label>Jenis Kelamin</label>
+          <div>
+            <input type="radio" id="male" name="gender" value="L" /><label for="male">Laki-laki</label>
+            &nbsp;&nbsp;
+            <input type="radio" id="female" name="gender" value="P" /><label for="female">Perempuan</label>
+          </div>
+        </div>
+
+        <div class="full">
+          <label for="ukmSelect">Pilih UKM yang ingin diikuti <span aria-hidden="true">*</span></label>
+          <select id="ukmSelect" name="ukm" required>
+            <option value="">-- Pilih UKM --</option>
+            <option>UKM Olahraga</option>
+            <option>UKM Seni & Budaya</option>
+            <option>UKM Teknologi & Robotika</option>
+            <option>UKM Kewirausahaan</option>
+            <option>UKM Kesehatan</option>
+            <option>UKM Pecinta Alam</option>
+          </select>
+        </div>
+
+        <div class="full">
+          <label>Minat / Keterampilan (centang jika ada)</label>
+          <div>
+            <input type="checkbox" id="skill1" name="skills[]" value="kepemimpinan" /><label for="skill1">Kepemimpinan</label>
+            &nbsp;&nbsp;
+            <input type="checkbox" id="skill2" name="skills[]" value="desain" /><label for="skill2">Desain Grafis</label>
+            &nbsp;&nbsp;
+            <input type="checkbox" id="skill3" name="skills[]" value="programming" /><label for="skill3">Programming</label>
+            &nbsp;&nbsp;
+            <input type="checkbox" id="skill4" name="skills[]" value="musik" /><label for="skill4">Musik</label>
+          </div>
+        </div>
+
+        <div class="full">
+          <label for="motivation">Motivasi / Harapan (ringkas)</label>
+          <textarea id="motivation" name="motivation" maxlength="800" placeholder="Tuliskan motivasi Anda bergabung (maks 800 karakter)"></textarea>
+        </div>
+
+        <div>
+          <label for="photo">Upload Foto (opsional)</label>
+          <input id="photo" name="photo" type="file" accept="image/*" />
+        </div>
+
+        <div>
+          <label>Preview Foto</label>
+          <img id="photoPreview" class="photo-preview" alt="Preview Foto" src="" />
+        </div>
+
+        <div class="full">
+          <label><input id="agree" name="agree" type="checkbox" required /> Saya menyatakan data di atas benar dan bersedia mengikuti peraturan UKM <span class="muted">*</span></label>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="reset" class="secondary">Reset</button>
+        <button type="submit">Kirim Pendaftaran</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // preview foto
+    const photo = document.getElementById('photo');
+    const preview = document.getElementById('photoPreview');
+    photo.addEventListener('change', e => {
+      const f = e.target.files[0];
+      if (!f) { preview.src = ''; return; }
+      const url = URL.createObjectURL(f);
+      preview.src = url;
+    });
+
+    // validasi ringkas sebelum submit (client-side)
+    document.getElementById('ukmForm').addEventListener('submit', function (ev) {
+      if (!this.checkValidity()) {
+        ev.preventDefault();
+        alert('Mohon lengkapi semua field wajib.');
+        return;
+      }
+      // ganti action form agar mengirim ke server nyata
+      // this.action = '/submit-pendaftaran.php';
+      // jika ingin menampilkan data di halaman lain, gunakan fetch/ajax di sini
+    });
+  </script>
+</body>
+</html>
