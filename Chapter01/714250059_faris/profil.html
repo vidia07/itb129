@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Profil - 714250059_faris</title>
+	<style>
+		:root{font-family:Segoe UI,Roboto,Arial,sans-serif;color:#222}
+		body{max-width:1000px;margin:24px auto;padding:16px}
+		header{display:flex;gap:16px;align-items:center}
+		.avatar{width:120px;height:120px;border-radius:8px;background:#ddd;display:flex;align-items:center;justify-content:center;font-weight:700}
+		h1{margin:0;font-size:1.5rem}
+		.meta{color:#555}
+		section{margin-top:20px}
+		.grid{display:grid;grid-template-columns:1fr 360px;gap:24px}
+		.card{background:#fafafa;border:1px solid #eee;padding:12px;border-radius:6px}
+		table{width:100%;border-collapse:collapse}
+		th,td{padding:8px;border:1px solid #e6e6e6;text-align:left}
+		th{background:#f3f4f6}
+		form label{display:block;margin-top:8px;font-size:0.9rem}
+		input,select{width:100%;padding:8px;margin-top:4px;border:1px solid #ccc;border-radius:4px}
+		.btn{display:inline-block;padding:8px 12px;border-radius:4px;border:none;cursor:pointer}
+		.btn-primary{background:#2563eb;color:#fff}
+		.btn-danger{background:#ef4444;color:#fff}
+		.small{font-size:0.9rem;color:#666}
+		.message{margin-top:10px;padding:10px;border-radius:4px}
+		.message.success{background:#ecfdf5;color:#065f46;border:1px solid #bbf7d0}
+		.message.error{background:#fff1f2;color:#991b1b;border:1px solid #fecaca}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="avatar">FARIS</div>
+		<div>
+			<h1>Faris (714250059)</h1>
+			<div class="meta">Mahasiswa Teknik Informatika — Institut Teknologi Bandung</div>
+		</div>
+	</header>
+
+	<section class="grid">
+		<div>
+			<div class="card">
+				<h2>Profil Pribadi</h2>
+				<p class="small">Berikut ringkasan singkat tentang saya.</p>
+				<ul>
+					<li>Nama: Muhammad Faris Gibran Albani</li>
+					<li>NIM: 714250059</li>
+					<li>Program Studi: Teknik Informatika</li>
+					<li>Angkatan: 2025</li>
+					<li>Email: farisgibran1804@gmail.com</li>
+				</ul>
+			</div>
+
+			<div class="card" style="margin-top:16px">
+				<h2>Data Mahasiswa</h2>
+				<p class="small">Tabel berisi contoh data mahasiswa. Anda dapat menambah lewat formulir di samping.</p>
+				<div style="overflow:auto;max-height:360px">
+				<table id="mahasiswaTable">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>NIM</th>
+							<th>Nama</th>
+							<th>Jurusan</th>
+							<th>Tahun</th>
+							<th>Aksi</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- rows injected by JS -->
+					</tbody>
+				</table>
+				</div>
+			</div>
+		</div>
+
+		<aside>
+			<div class="card">
+				<h2>Form Pendaftaran</h2>
+				<p class="small">Isi data mahasiswa baru. Semua kolom wajib diisi.</p>
+				<form id="regForm">
+					<label for="nim">NIM</label>
+					<input id="nim" name="nim" type="text" inputmode="numeric" pattern="\d+" required />
+
+					<label for="nama">Nama</label>
+					<input id="nama" name="nama" type="text" required />
+
+					<label for="email">Email</label>
+					<input id="email" name="email" type="email" required />
+
+					<label for="jurusan">Jurusan</label>
+					<select id="jurusan" name="jurusan" required>
+						<option value="">-- Pilih jurusan --</option>
+						<option>Teknik Informatika</option>
+						<option>Teknik Elektro</option>
+						<option>Sistem Informasi</option>
+						<option>Teknik Mesin</option>
+					</select>
+
+					<label for="tahun">Tahun Masuk</label>
+					<input id="tahun" name="tahun" type="number" min="2000" max="2100" required />
+
+					<div style="margin-top:12px;display:flex;gap:8px;align-items:center">
+						<button class="btn btn-primary" type="submit">Daftar</button>
+						<button class="btn" type="button" id="resetBtn">Reset</button>
+					</div>
+
+					<div id="formMessage" role="status" aria-live="polite"></div>
+				</form>
+			</div>
+		</aside>
+	</section>
+
+	<script>
+		// Simple client-side storage for mahasiswa data
+		const STORAGE_KEY = 'mahasiswaData_v1_714250059';
+
+		const sampleData = [
+			{nim: '714250001', nama: 'Andi', jurusan: 'Teknik Informatika', tahun: 2022, email: 'andi@example.com'},
+			{nim: '714250013', nama: 'Shafa', jurusan: 'Sistem Informasi', tahun: 2023, email: 'shafa@example.com'},
+			{nim: '714250020', nama: 'Reyhan', jurusan: 'Teknik Elektro', tahun: 2021, email: 'reyhan@example.com'}
+		];
+
+		function loadData(){
+			const raw = localStorage.getItem(STORAGE_KEY);
+			if(!raw) { localStorage.setItem(STORAGE_KEY, JSON.stringify(sampleData)); return sampleData.slice(); }
+			try{ return JSON.parse(raw); }catch(e){ console.error('Invalid stored data', e); localStorage.removeItem(STORAGE_KEY); return sampleData.slice(); }
+		}
+
+		function saveData(arr){ localStorage.setItem(STORAGE_KEY, JSON.stringify(arr)); }
+
+		function renderTable(){
+			const data = loadData();
+			const tbody = document.querySelector('#mahasiswaTable tbody');
+			tbody.innerHTML = '';
+			data.forEach((m, idx) => {
+				const tr = document.createElement('tr');
+				tr.innerHTML = `
+					<td>${idx+1}</td>
+					<td>${escapeHtml(m.nim)}</td>
+					<td>${escapeHtml(m.nama)}</td>
+					<td>${escapeHtml(m.jurusan)}</td>
+					<td>${escapeHtml(m.tahun)}</td>
+					<td><button class="btn btn-danger" data-idx="${idx}">Hapus</button></td>
+				`;
+				tbody.appendChild(tr);
+			});
+		}
+
+		function escapeHtml(s){ return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;'); }
+
+		document.addEventListener('DOMContentLoaded', ()=>{
+			renderTable();
+
+			document.getElementById('regForm').addEventListener('submit', (e)=>{
+				e.preventDefault();
+				const nim = document.getElementById('nim').value.trim();
+				const nama = document.getElementById('nama').value.trim();
+				const email = document.getElementById('email').value.trim();
+				const jurusan = document.getElementById('jurusan').value;
+				const tahun = document.getElementById('tahun').value;
+
+				const msgEl = document.getElementById('formMessage');
+				msgEl.textContent = '';
+				msgEl.className = '';
+
+				// Basic validation
+				if(!/^\d{6,12}$/.test(nim)){
+					showMessage('NIM harus berupa 6-12 digit angka.', 'error'); return;
+				}
+				if(nama.length < 3){ showMessage('Nama terlalu pendek.', 'error'); return; }
+				if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ showMessage('Format email tidak valid.', 'error'); return; }
+				if(!jurusan){ showMessage('Pilih jurusan.', 'error'); return; }
+				const tnum = Number(tahun);
+				if(!tnum || tnum < 2000 || tnum > 2100){ showMessage('Tahun tidak valid.', 'error'); return; }
+
+				const data = loadData();
+				if(data.some(x => x.nim === nim)) { showMessage('NIM sudah terdaftar.', 'error'); return; }
+
+				data.push({nim, nama, jurusan, tahun: tnum, email});
+				saveData(data);
+				renderTable();
+				e.target.reset();
+				showMessage('Pendaftaran berhasil ditambahkan.', 'success');
+			});
+
+			document.getElementById('resetBtn').addEventListener('click', ()=>{
+				document.getElementById('regForm').reset();
+				document.getElementById('formMessage').textContent = '';
+				document.getElementById('formMessage').className = '';
+			});
+
+			document.querySelector('#mahasiswaTable tbody').addEventListener('click', (ev)=>{
+				const btn = ev.target.closest('button');
+				if(!btn) return;
+				const idx = Number(btn.getAttribute('data-idx'));
+				if(Number.isFinite(idx)){
+					if(!confirm('Hapus data mahasiswa ini?')) return;
+					const data = loadData();
+					data.splice(idx,1);
+					saveData(data);
+					renderTable();
+					showMessage('Data mahasiswa dihapus.', 'success');
+				}
+			});
+		});
+
+		function showMessage(text, type){
+			const el = document.getElementById('formMessage');
+			el.textContent = text;
+			el.className = 'message ' + (type === 'success' ? 'success' : 'error');
+		}
+	</script>
+</body>
+</html>
