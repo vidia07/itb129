@@ -1,0 +1,62 @@
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Grid & Selector</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      h1 {
+        font-size: 20px;
+        text-align: center;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .item {
+        background-color: blue;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 25px;
+        height: 100px;
+        transition: all 0.5 ease;
+      }
+      .special {
+        background-color: gold;
+        color: black;
+        transition: all 0.5 ease;
+      }
+      #unique {
+        background-color: red;
+        transition: all 0.5 ease;
+      }
+      .item:hover {
+        background-color: rgb(0, 0, 187);
+        transform: translateY(-2px);
+      }
+      .special:hover {
+        background-color: rgb(199, 169, 0);
+        transform: translateY(-2px);
+      }
+      #unique:hover {
+        background-color: rgb(199, 0, 0);
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Grid & Selector</h1>
+    <div class="container">
+      <div class="item">Box 1</div>
+      <div class="item">Box 2</div>
+      <div class="item">Box 3</div>
+      <div class="item">Box 4</div>
+      <div class="item special">Box 5</div>
+      <div class="item" id="unique">Box 6</div>
+    </div
+  </body>
+</html>
