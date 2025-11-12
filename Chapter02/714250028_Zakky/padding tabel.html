@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Padding dan tabel</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #064611;
+      }
+      h1 {
+        text-align: center;
+        color: white;
+      }
+      .container {
+        background-color: white;
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 20px;
+        padding: 15px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      th,
+      td {
+        border: 1px solid #999;
+        padding: 7px;
+      }
+
+      th {
+        background-color: #119b36;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      tr:hover {
+        background-color: #d9ebff;
+        transition: 0.2s;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Wishlist</h1>
+    <div class="container">
+      <table>
+        <tr>
+          <th>Nama Barang</th>
+          <th>Harga</th>
+        </tr>
+        <tr>
+          <td>Korek Kuping Elektrik</td>
+          <td>Rp70.000</td>
+        </tr>
+        <tr>
+          <td>Speaker</td>
+          <td>Rp200.000</td>
+        </tr>
+        <tr>
+          <td>Smartwatch</td>
+          <td>Rp300.000</td>
+        </tr>
+        <tr>
+          <td>Polo</td>
+          <td>Rp140.000</td>
+        </tr>
+        <tr>
+          <td>Celana Cargo</td>
+          <td>Rp150.000</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
