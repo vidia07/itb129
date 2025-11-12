@@ -1,0 +1,122 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; 
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+
+header {
+    background-color: #e55a0f;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin-bottom: 5px;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-style: italic;
+    opacity: 0.9;
+}
+
+
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+section h2 {
+    text-align: center;
+    color: #cc4d00;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #e55a0f;
+    margin: 10px auto 0;
+}
+
+
+#menu {
+    background-color: white;
+    padding: 50px 0;
+}
+
+.menu-item {
+    background: #fff8e1;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #cc4d00;
+}
+
+.menu-item h3 {
+    margin-top: 0;
+    color: #e55a0f;
+}
+
+.price {
+    display: block;
+    text-align: right;
+    font-weight: 700;
+    color: #00704a; 
+    font-size: 1.2em;
+}
+
+
+#contact {
+    text-align: center;
+}
+
+.btn-order {
+    display: inline-block;
+    background-color: #00704a;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-order:hover {
+    background-color: #005f3d;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
