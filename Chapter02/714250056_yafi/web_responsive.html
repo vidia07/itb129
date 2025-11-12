@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website responsive</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: azure;
+        }
+
+        header {
+            background-color: aquamarine;
+            color: antiquewhite;
+            text-decoration: line-through;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: end;
+            background-color: aliceblue;
+        }
+        nav a {
+            text-transform: lowercase;
+            color: aqua;
+            padding: 20px 40px;
+        }
+
+        .container {
+            max-width: 1500px;
+            margin: 40px;
+            padding: 40px;
+            background-color: aqua;
+            border-radius: 10px;
+            display: contents;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .main-content {
+            flex: 80%;
+        }
+
+        .sidebar {
+            flex: 20%;
+        }
+
+        footer {
+            background-color: black;
+            color: azure;
+            text-align: justify;
+            padding: 10px;
+        }
+
+        @media {max-width: 800px;} {
+            .container {
+                flex-direction: column;
+            }
+            .main-content,
+            .sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat datang di web ku</h1>
+    </header>
+    <nav>
+        <a href="#">Beranda</a>
+        <a href="#">Tentang kami</a>
+        <a href="#">layanan</a>
+        <a href="#">kontrak</a>
+    </nav>
+    <div class="container">
+        <h2>selamat datang di web ku</h2>
+        <p>
+            ini adalah tampilan website responsive
+        </p>
+    </div>
+    <div class="sidebar">
+        <h3>Bar samping</h3>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+    </div>
+</body>
+</html>
