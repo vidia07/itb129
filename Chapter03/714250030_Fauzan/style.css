@@ -1,0 +1,220 @@
+/* Reset CSS dasar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #383838;
+    color: #333;
+}
+
+/* Penampung (Container) untuk membatasi lebar konten */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Styling Header dan Navigasi */
+header {
+    background-color: #0a0a0a; 
+    color: white;
+    padding: 10px 0;
+    border-bottom: 3px solid #111111;
+}
+
+header h1 {
+    margin: 0;
+    float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Emas saat di-hover */
+}
+
+/* Membersihkan float setelah header */
+header .container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Bagian Hero/Utama */
+.hero {
+    background: #1c1c1c; /* Biru sedang */
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff6f00; /* Oranye */
+    color: rgb(34, 34, 34);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff8f00;
+}
+
+/* Bagian Produk */
+.produk {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.produk h2 {
+    color: #d8d9db;
+    margin-bottom: 40px;
+}
+
+.produk-grid {
+    display: flex; /* Menggunakan Flexbox untuk tata letak kolom */
+    justify-content: space-around;
+    flex-wrap: wrap; /* Memungkinkan produk pindah baris jika layar kecil */
+    gap: 20px; /* Jarak antar item */
+}
+
+.produk-item {
+    background-color: rgb(37, 37, 37);
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 20px); /* Tiga item per baris */
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.produk-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.produk-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.produk-item h3 {
+    color: #ff6f00;
+    margin: 10px 0;
+}
+
+.harga {
+    font-size: 1.5em;
+    color: #fafafa;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.deskripsi {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.beli-button {
+    background-color: #00c853; /* Hijau */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.beli-button:hover {
+    background-color: #00e676;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.kontak-info {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Media Queries untuk Responsif (Opsional, tapi disarankan) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .produk-item {
+        width: calc(50% - 20px); /* Dua item per baris di layar sedang */
+    }
+
+    nav {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    header h1 {
+        float: none;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .produk-item {
+        width: 100%; /* Satu item per baris di layar kecil */
+    }
+}

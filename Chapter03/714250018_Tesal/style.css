@@ -1,0 +1,516 @@
+/* ====== GLOBAL ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #fff8f0;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ====== NAVBAR ====== */
+header {
+  background-color: #4b2e05;
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffcc66;
+}
+
+/* ====== HERO ====== */
+.hero {
+  background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.hero h2 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background-color: #ffcc66;
+  color: #3b2600;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #f1b72d;
+}
+
+/* ====== MENU ====== */
+.menu-section {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.menu-section h2 {
+  font-size: 2.5em;
+  color: #3b2600;
+  margin-bottom: 40px;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.menu-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  padding-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.menu-card h3 {
+  margin-top: 15px;
+  font-size: 1.5em;
+  color: #4b2e05;
+}
+
+.menu-card p {
+  padding: 0 15px;
+  font-size: 0.95em;
+  color: #666;
+}
+
+.price {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #c57a00;
+}
+
+/* ====== ABOUT ====== */
+.about-section {
+  background-color: #fff1dc;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.about-section h2 {
+  font-size: 2.5em;
+  color: #4b2e05;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.1em;
+  color: #555;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+/* ====== CONTACT ====== */
+.contact-section {
+  text-align: center;
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.contact-section h2 {
+  font-size: 2.5em;
+  color: #3b2600;
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #4b2e05;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+.contact-info {
+  margin-top: 30px;
+  color: #444;
+  line-height: 1.8;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background-color: #4b2e05;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9em;
+  margin-top: 50px;
+}
+
+/* ====== HERO ====== */
+.hero {
+  background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+/* ====== WHY SECTION ====== */
+.why-section {
+  background-color: #fff1dc;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.why-section h2 {
+  color: #4b2e05;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.why-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+}
+
+.why-card img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.why-card h3 {
+  color: #3b2600;
+  margin-bottom: 10px;
+}
+
+/* ====== CENTER BUTTON ====== */
+.center {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ====== ABOUT PAGE ====== */
+.about-page {
+  padding: 80px 0;
+  background-color: #fffaf3;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-image {
+  flex: 1 1 45%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.about-text {
+  flex: 1 1 50%;
+}
+
+.about-text h2 {
+  font-size: 2.5em;
+  color: #4b2e05;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* ====== TEAM SECTION ====== */
+.team-section {
+  background-color: #fff1dc;
+  text-align: center;
+  padding: 80px 0;
+}
+
+.team-section h2 {
+  color: #4b2e05;
+  margin-bottom: 50px;
+  font-size: 2.5em;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.team-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.team-card h3 {
+  color: #3b2600;
+  margin-bottom: 8px;
+}
+
+.team-card p {
+  color: #6b5a36;
+}
+
+/* ====== CONTACT PAGE ====== */
+.contact-page {
+  background-color: #fffaf3;
+  padding: 80px 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.contact-info {
+  flex: 1 1 40%;
+}
+
+.contact-info h2 {
+  font-size: 2.2em;
+  color: #4b2e05;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+  color: #3b2600;
+  font-weight: 500;
+}
+
+.socials a {
+  display: inline-block;
+  margin-right: 15px;
+  text-decoration: none;
+  color: #7a4a00;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #c68900;
+}
+
+/* ====== CONTACT FORM ====== */
+.contact-form {
+  flex: 1 1 50%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-form h3 {
+  color: #4b2e05;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #c68900;
+  box-shadow: 0 0 4px #f0b84b;
+}
+
+/* ====== MAP SECTION ====== */
+.map-section iframe {
+  width: 100%;
+  border: none;
+  margin-top: 50px;
+  display: block;
+}
