@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+}
+
+body {
+    background-image: url('https://i.pinimg.com/1200x/7a/ac/7e/7aac7eb9f34a54ec650b7dc0523a33f6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    display: flex;
+    background-color: lightblue;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f2f2f2;
+    padding: 20px 7%;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar a {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(94, 94, 158);
+    text-align: center;
+    padding: 40px;
+    text-decoration: none;
+    margin: 0;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    padding: 14px 16px;
+    margin: 0;
+}
+
+.title {
+    color: rgb(94, 94, 158);
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+/* Supaya Cover berada diatas */
+main section:first-of-type {
+    background-color: brokenwhite;
+    padding: 60px 20px;
+    margin-top: 25px;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+/* Biar Catalog berada dibawah */
+.catalog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: rgb(197, 236, 248);
+    padding: 40px;
+    margin: 50px auto;
+    border-radius: 10px;
+    width: 60%;
+}
+
+/* Setiap Product */
+.product {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product h2 {
+    color:rgb(94, 94, 158);
+    margin-top: 10px;
+}
+
+.product p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.price {
+    color: rgb(0, 183, 255);
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+footer { 
+     background-color: lightcyan; 
+     color: black; 
+     text-align: center; 
+     padding: 5px; 
+    }

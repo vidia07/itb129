@@ -1,0 +1,130 @@
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: lemonchiffon;
+   line-height: 1.5;
+}
+
+.navbar {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-image: url('foto/fotbar.jpg');
+   background-size: cover;
+   padding : 15px 30px;
+}
+
+.navbar ul {
+   list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li{
+   margin: 0 18px;
+}
+
+.navbar ul li a {
+   color: darkred;
+   font-weight: 600;
+   text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: red; 
+}
+
+header.content {
+   background: papayawhip;
+   text-align: center;
+   padding: 50px 20px;
+}
+
+header.content h1 {
+  margin: 0;
+  color: darkred;
+}
+
+header.content p {
+   font-size: 18px;
+   color: #333;
+}
+
+.card {
+   background-color: white;      
+   margin: 20px auto;           
+   padding: 20px;                 
+   max-width: 800px;              
+   border-radius: 8px;            
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+   color: darkred;                
+   margin-top: 0; 
+}
+
+.card p {
+   color: #333;                   
+}
+
+img {
+   display: block;
+   margin: 10px auto;             
+   border-radius: 5px;            
+}
+
+.pelatih-container {
+    display: flex;          
+    justify-content: center; 
+    gap: 20px;              
+}
+
+.pelatih {
+    text-align: center;     
+}
+
+.tanjung {
+    border-radius: 50%;     
+    border: 2px solid darkred;
+}
+
+.joko {
+    border-radius: 10px;    
+    border: 2px solid orange;
+}
+
+
+a {
+   color: darkred;              
+   text-decoration: none;         
+   font-weight: bold;
+}
+
+a:hover {
+   text-decoration: underline;    
+}
+
+ol {
+   padding-left: 20px;            
+   color: #333;                   
+}
+
+#Daftar {
+   text-align: center;   
+   background-color: #fff5f5;  
+   padding: 20px;        
+}
+
+#Daftar a {
+    color: darkred;
+   text-decoration: none;
+}
+
+#Daftar a:hover {
+   text-decoration: underline;
+}
+
