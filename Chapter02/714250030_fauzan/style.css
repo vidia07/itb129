@@ -1,0 +1,90 @@
+/* Reset dan Gaya Umum */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+header p {
+  margin: 10px 0 0;
+  font-size: 16px;
+}
+
+/* Navigasi */
+nav {
+  background-color: #c1cccf;
+  text-align: center;
+  padding: 15px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 25px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Konten Utama */
+main {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+section {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 40%;
+  min-width: 280px;
+}
+
+section h2 {
+  color: black;
+  margin-top: 0;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
