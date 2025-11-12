@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Pemrograman I</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    /* Header biru */
+    header {
+      background-color: #3498db;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    header p {
+      margin-top: 5px;
+      font-size: 16px;
+    }
+
+    /* Navigasi hijau */
+    nav {
+      background-color: #27ae60;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    nav a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      background-color: #219150;
+    }
+
+    /* Layout dua kolom */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .main-content {
+      flex: 3;
+      margin-right: 20px;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: #eaf5fb;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+    }
+
+    .sidebar ul {
+      padding-left: 20px;
+    }
+
+    .sidebar li {
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 30px;
+    }
+
+    /* Responsif untuk layar kecil */
+    @media (max-width: 700px) {
+      .container {
+        flex-direction: column;
+        padding: 15px;
+      }
+
+      .main-content {
+        margin-right: 0;
+      }
+
+      .sidebar {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Belajar Pemrograman I</h1>
+    <p>Selamat datang di kursus pemrograman pertama Anda.</p>
+  </header>
+
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Tentang Kami</a>
+    <a href="#">Kursus</a>
+    <a href="#">Kontak</a>
+  </nav>
+
+  <div class="container">
+    <div class="main-content">
+      <h2>Selamat datang di Kursus Pemrograman I</h2>
+      <p>Ini adalah kursus pemrograman pertama Anda, yang akan membantu Anda memahami dasar-dasar pemrograman. 
+        Kami akan mempelajari berbagai bahasa pemrograman, konsep dasar, dan cara memulai menjadi seorang pengembang perangkat lunak.</p>
+    </div>
+
+    <div class="sidebar">
+      <h3>Bar Samping</h3>
+      <ul>
+        <li>Item 1  </li>
+        <li>Item 2  </li>
+        <li>Item 3  </li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    © 2023 Belajar Pemrograman I. Hak Cipta Dilindungi.
+  </footer>
+
+</body>
+</html>
