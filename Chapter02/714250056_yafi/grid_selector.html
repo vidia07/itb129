@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid and slector</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px
+        }
+
+        .item {
+            background-color: aquamarine;
+            color: azure;
+            padding: 30px;
+            text-overflow: clip;
+            font-size: small;
+        }
+
+        .special {
+            background-color: bisque;
+        }
+
+        #unique {
+            background-color: bisque;
+        }
+
+        .container p {
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS GRID DAN SELECTOR</h1>
+    <div class="item">kosong 1</div>
+    <div class="item">kosong 2</div>
+    <div class="item">kosong 3</div>
+    <div class="item special">kosong 4(special)</div>
+    <p>contoh teks dalam container</p>
+    <p>contoh teks dalam luar container</p>
+</body>
+</html>
