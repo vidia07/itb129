@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Responsif</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 50px; /* Space for footer */
+  background-color: #f2f2f2;
+}
+
+header {
+  background-color: #094684;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #27ae60;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content {
+    width: 70%;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+
+
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+@media (max-width: 768px) {}
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Selamat datang di website keren</h1>
+        <nav>
+            <a href="https://www.petanikode.com/tutorial/css/">Beranda</a>
+            <a href="https://www.petanikode.com/tutorial/c++/">Tentang kami</a>
+            <a href="https://www.petanikode.com/tutorial/python/">Layanan</a>
+            <a href="https://www.petanikode.com/tutorial/html/">Kontak</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content">
+            <h2>Selamat datang di website kami</h2>
+            <p>
+                Ini adalah contoh tampilan webiste sederhana yang responsif. anda dapat menambahkan lebih banyak konten disini.
+            </p>
+        </section>
+        <section class="content">
+            <h2>Bar samping</h2>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Website Keren. Hak Cipta Dilindungi</p>
+    </footer>
+
+</body>
+</html>
