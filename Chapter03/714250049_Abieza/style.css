@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-image: url('https://i.pinimg.com/736x/a7/12/65/a71265c7fad7499f31be47a4a06ed4c7.jpg'); }
+    
+    header { 
+        background-color: #001878; 
+        color: white; 
+        padding: 10px; 
+        text-align: center; }
+
+        nav { 
+            background-color: black; 
+            padding: 10px; }
+        nav ul { 
+            list-style: none; 
+            padding: 0; 
+            text-align: center; }
+        nav ul li { 
+            display: inline; 
+            margin: 0 15px; }
+        nav a { 
+            color: white; 
+            text-decoration: none; }
+        .hero { 
+            background-size: cover; 
+            height: 300px; 
+            text-align: center; 
+            color: rgb(0, 0, 0);
+            top: 50%; 
+            padding-top: 150px;
+        }
+
+        .products { 
+            padding: 20px; 
+            text-align: center; }
+
+        .product { 
+            display: inline-block; 
+            margin: 10px; 
+            padding: 10px; 
+            background: white; 
+            border: 1px solid #ffffff; 
+            width: 200px;
+            border-radius: 10%;
+            box-shadow: 2px 2px 5px 0px #000000;
+         }
+
+        .about { 
+            padding: 10px; 
+            background-color: #001878; 
+            color: white;
+            text-align: center; }
+        footer { 
+            background-color: black; 
+            color: white; 
+            text-align: center; 
+            padding: 5px; }
