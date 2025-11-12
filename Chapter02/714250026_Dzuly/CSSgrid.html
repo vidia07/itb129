@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid dan Selector</title>
+    <style>
+        .grid-container {
+            display: grid;
+            -ms-grid-row-align: center; 
+            -ms-grid-column-align: center;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: auto auto auto;
+            gap: 100px;
+            background-color: #25e03b;
+            padding: 10px;
+            width: 60%;
+            height: 40;
+            margin: 30px;
+            align-items: center;
+            align-content: center;
+        }
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            align-content: center;
+        }
+
+        /*selector untuk elemen dengan class "special"*/
+        .special {
+            background-color: #22b9ff;
+            color: white;
+            font-weight: bold;
+            font-size: 35px;
+            font-style: normal;
+            font-family: 'verdana', 'Times New Roman', Times, serif;
+        }
+
+        /*selector untuk elemen dengan class "unique"*/
+        .unique {
+            background-color: #e58d00;
+            color: rgb(245, 219, 160);
+            font-weight: bold;
+            font-size: 40px;
+            font-style: italic;
+            font-family: 'montserrat', 'Times New Roman', Times, serif;
+        }
+
+        /*selector untuk elemen legendary*/
+        .legendary {
+            width: 400px;
+            background-color: #ff0000;
+            color: rgb(255, 255, 255);
+            font-weight: bolder;
+            font-size: 50px;
+            font-style: normal;
+            font-family: 'arial', 'Times New Roman', Times, serif;
+        }
+
+        /* Subheading di baris baru, span seluruh kolom grid tanpa mengganggu class lain */
+        .grid-container .subheading {
+            grid-column: 1 / -1;
+            margin: 0 0 8px;
+            font-size: 1.2rem;
+            color: #072f00;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        /*selector untuk elemen <p> di dalam elemen dengan class "grid.container"*/
+        .grid-container p {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contoh CSS Grid dan Selector</h1>
+    <div class="grid-container">
+        <h3 class="subheading">KATEGORI BARANG</h3>
+        <div class="grid-item">1      </div>
+        <div class="grid-item">2      </div>
+        <div class="grid-item">3      </div>
+        <div class="grid-item">4      </div>
+        <div class="grid-item special">5 (Special)</div>
+        <div class="grid-item unique">6 (Unique)</div>
+    </div>
+    <p>Ini adalah paragraf di luar grid container.</p>
+    <div class="grid-container">
+        <p>Paragraf di dalam grid container.</p>
+    <div class="grid-item legendary">FLASH SALE</div>
+    <br></br>
+    <div class="grid-container">
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        <div class="grid-item">11</div>
+        <div class="grid-item">12</div>
+        <div class="grid-item">13</div>
+    </div>
+</body>
+</html>
