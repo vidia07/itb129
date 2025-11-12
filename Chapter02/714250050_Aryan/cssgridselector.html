@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid dan Selector</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .item {
+            background-color: rgb(113, 113, 211);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .special {
+            background-color: rgb(221, 219, 109);
+        }
+
+        #unique {
+            background-color: brown;
+        }
+
+        .container p {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kantin Go</h1>
+    <div class="container">
+        <div class="item">Bakwan</div>
+        <div class="item">Indomie</div>
+        <div class="item special">Nasi Goreng</div>
+        <div class="item">Tempe</div>
+        <div class="item">Nasi Uduk</div>
+        <div class="item" id="unique">Mie Ayam</div>
+    </div>
+    <p>teks container</p>
+    <p>teks non container</p>
+</body>
+</html>
