@@ -1,0 +1,1 @@
+Saya membuat halaman web galeri motor impian dengan desain sederhana berisi judul, latar berwarna, dan tiga kartu motor lengkap dengan gambar dan nama motornya.

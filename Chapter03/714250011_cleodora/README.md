@@ -1,0 +1,1 @@
+Website ini dibuat menggunakan HTML dan CSS untuk menampilkan tampilan yang menarik dan responsif. Situs ini berfokus pada penjualan brownies dengan beberapa menu pilihan rasa yang menggugah selera. Desainnya sederhana namun elegan, sehingga pengunjung dapat dengan mudah melihat, memilih, dan mengenal produk brownies yang ditawarkan.
