@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 30px 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .actions {
+            text-align: right;
+            padding-top: 15px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        input[type="reset"] {
+            background-color: #f44336;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulir Pendaftaran</h2>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td>Nama Lengkap:</td>
+                    <td><input type="text" name="nama_lengkap" required></td>
+                </tr>
+                <tr>
+                    <td>Tempat/Tgl Lahir:</td>
+                    <td>
+                        <input type="text" name="tempat_lahir" placeholder="Tempat" required>
+                        <input type="date" name="tanggal_lahir" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin:</td>
+                    <td class="radio-group">
+                        <label><input type="radio" name="jenis_kelamin" value="pria" required> Pria</label>
+                        <label><input type="radio" name="jenis_kelamin" value="perempuan"> Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alamat:</td>
+                    <td><textarea name="alamat" cols="22" rows="3" required></textarea></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td>No HP:</td>
+                    <td><input type="tel" name="no_hp" required></td>
+                </tr>
+                <tr>
+                    <td>Kota:</td>
+                    <td>
+                        <select name="kota" required>
+                            <option value="">-- Pilih Kota --</option>
+                            <option value="bandung">Bandung</option>
+                            <option value="jakarta">Jakarta</option>
+                            <option value="surabaya">Surabaya</option>
+                            <option value="medan">Medan</option>
+                            <option value="semarang">Semarang</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <div class="actions">
+                <input type="submit" name="submit" value="Simpan">
+                <input type="reset" name="reset" value="Batal">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
