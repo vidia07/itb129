@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f270;
+}
+
+/* Header */
+header {
+  background-color: #14a1ff;
+  color: rgb(255, 0, 13);
+  text-align: center;
+  padding: 40px;
+}
+
+/* Navigasi */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #27ae60;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+}
+
+nav a:hover {
+  background-color: #219150;
+  border-radius: 5px;
+}
+
+/* Konten utama */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Setiap section konten */
+.content {
+  width: 45%;
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #ff9900;
+  color: rgb(140, 0, 255);
+  text-align: center;
+  padding: 10px;
+}
