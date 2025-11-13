@@ -1,0 +1,1 @@
+Di dalam folder tugas kali ini saya membuat web tampilan Foto seperti galeri digital yang berisi gambar2 via link website lain, adapula link ke profil pribadi media sosial saya.
