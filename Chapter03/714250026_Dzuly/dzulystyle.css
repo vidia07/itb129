@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #191919;
+    color: #333;
+}
+
+header {
+    position: relative;
+    height: 300px;
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1600');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* opacity 50% hitam */
+    z-index: 0;
+}
+
+header .overlay {
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+nav {
+    background-color: #222;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #1cc88a;
+}
+
+.gallery-section {
+    width: 90%;
+    margin: 2rem auto;
+    text-align: center;
+    
+}
+
+.gallery-section h2 {
+    margin-bottom: 1rem;
+    color: #222;
+    color: white;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.info-section {
+    background: rgba(79, 197, 201, 0.9);
+    padding: 2rem;
+    text-align: center;
+    border-top: 2px solid #ccc;
+}
+
+.info-section a {
+    color: #aff8ca;
+    text-shadow: #191919;
+    text-decoration: none;
+}
+
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 3px solid #ffffff;
+}
+
+footer a {
+    color: #1cc88a;
+    text-decoration: none;
+}
