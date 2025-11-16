@@ -1,4 +1,3 @@
 function myFunction() {
-    document.getElementById("demo").innerHTML =
-    "Paragraf dari File SCRIPT.JS - Silahkan dicoba kalau error benerin ya? hahaha"
-} 
+    document.getElementById("demo").innerHTML = "Ini teks dari file external JS!";
+}
