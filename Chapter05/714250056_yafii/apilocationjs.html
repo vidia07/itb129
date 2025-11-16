@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas4</title>
+</head>
+<body>
+    <p id="demo">jika di klik maka akan menunjukan koordinator latitude dan longitude</p>
+    <script>
+        const x = document.getElementById("demo");
+        function getlocation() {
+            try{
+                navigator.geolocation.getCurrentPosition(showposition);
+            } catch {
+                x.innerHTML = err
+                
+            }
+        }
+        function showposition(position) {
+            x.innerHTML = 
+            "latitude: " +
+            position.coords.latitude +
+            "<br>longitude: " +
+            position.coords.longitude;
+        }
+    </script>
+    <button type="button" onclick="getlocation()">Klik untuk melihat koordinat</button>
+</body>
+</html>
