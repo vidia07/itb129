@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengubah Atribut Dengan JavaScript</title>
+</head>
+<body>
+    <h1>Apa yang bisa dilakukan oleh JavaScript?</h1>
+    <p>JavaScript bisa mengganti atribut dari value.</p>
+    <p>Studi kasus disini JavaScript merubah nilai dari atribut sebuah gambar bola lampu</p>
+
+   <p id="demo">JavaScript bisa menyalakan lampu</p>
+
+    <button
+    onclick="document.getElementById('myImage').src='nyala.png'"
+    >
+Nyalakan lampunya
+
+</button>
+
+<img id="myImage" src="mati.png" style="width: 100px" />
+
+<button
+   onclick="document.getElementById('myImage').src='mati.png'"
+   >
+Matikan lampunya
+</button>
+</body>
+</html>
