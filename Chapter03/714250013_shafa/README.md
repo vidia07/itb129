@@ -1,0 +1,1 @@
+Website ini dibuat sebagai platform untuk menampilkan berbagai resep makanan dengan tampilan yang kekinian dan mudah dicoba. Website ini dibuat menggunakan HTML dan CSS untuk menampilkan tampilan yang menarik
