@@ -1,0 +1,2 @@
+Deskripsi
+Intruksi tugas mmembuat web yang bertema bebas, disini saya membuat web tema menu sebuah warung. disini saya menggunakan HTML dan CSS, di HTML saya menggunakan code div, hr, dan p dibagian body. untuk bagian CSS saya memakai code body, menu-card, item, line.
