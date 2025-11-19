@@ -16,7 +16,7 @@ Kerjakan sesuai soal dibawah SOAL A untuk NPM Ganjil, SOAL B untuk NPM Genap
 3. Desain high-tech neon, gradient, glassmorphism, atau dark mode.
 4. Responsif (mobile–tablet–desktop).
 5. Output:
-- Repository Github
+- Lakukan Pull Request dan Push ke Repository Github ini
 - Untuk Adlink Proyek lengkap + screenshot tampilan desktop & mobile masukan kedalam 1 file PDF dan kirimkan untuk dilakukan pengujian Coding di pertemuan berikutnya
 
 
@@ -34,6 +34,7 @@ Kerjakan sesuai soal dibawah SOAL A untuk NPM Ganjil, SOAL B untuk NPM Genap
 3. Desain elegan, minimalis, tipografi tegas, warna premium (white–gold, black–silver, dll).
 4. Responsif (mobile–tablet–desktop).
 5. Output:
-- Push ke Repository Github ini
+- Lakukan Pull Request dan Push ke Repository Github ini
 - Untuk Adlink Proyek lengkap + screenshot tampilan desktop & mobile masukan kedalam 1 file PDF dan kirimkan untuk dilakukan pengujian Coding di pertemuan berikutnya
+
 
