@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penggunaan API Location</title>
+</head>
+<body>
+    <h1>JavaScript Menggunakan Geolocation</h1>
+    <p>Klik tombol untuk menampilkan koordinat</p>  
+        
+    <button onclick="getLocation()">Klik Disini</button>
+    <p id="demo"></p>
+    <script>
+        const x = document.getElementById("demo");
+        function getLocation() {
+            try {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } catch (err) {
+                x.innerHTML = err;
+            }
+        }
+        function showPosition(position){
+            x.imerHTML ="Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitde;
+        }
+    </script>
+</body>
+</html>
