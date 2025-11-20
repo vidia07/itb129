@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation JavaScrip</title>
+</head>
+<body>
+    <h1>JavaScript Menggunakan Geolocation</h1>
+    <p>Klik button untuk menampilkan koodinat</p>
+
+    
+    <p id="demo"></p>
+    <script>
+        const x = document.getElementById("demo");
+        function getLocation() {
+            try {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } catch {
+                x.innerHTML = err;
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = 
+                "Latitude: " +
+                position.coords.latitude +
+                "<br>Longitude: " +
+                position.coords.longitude;
+        }
+    </script>
+
+    <button onclick="getLocation()">Klik Disini</button>
+
+    
+</body>
+</html>
