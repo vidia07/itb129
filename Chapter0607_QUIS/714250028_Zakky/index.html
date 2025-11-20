@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZackProject</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <span>zackproject.</span>
+        </div>
+        <button
+          aria-label="Toggle menu"
+          class="burger"
+          aria-expanded="false"
+          aria-controls="menu-list"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="menu-list" id="menu-list">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Service</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact" class="btn-book-now">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section
+      class="hero"
+      id="hero"
+      aria-label="Hero Section with luxury design"
+    >
+      <div class="hero-content">
+        <h1>Crafting Premium Creative Solutions</h1>
+        <p>
+          We turn your ideas into elegant designs with unmatched quality and
+          style.
+        </p>
+        <button
+          onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"
+        >
+          Get In Touch
+        </button>
+      </div>
+    </section>
+
+    <!-- Portfolio Slider -->
+    <section
+      class="portfolio"
+      id="portfolio"
+      aria-label="Portfolio Slider Section"
+    >
+      <h2 class="section-title">Our Portfolio</h2>
+      <div class="slider">
+        <button class="slider-btn prev" aria-label="Previous Slide">
+          &#10094;
+        </button>
+        <div class="slides" id="slides">
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+              alt="Creative project 1"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+              alt="Creative project 2"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+              alt="Creative project 3"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=800&q=80"
+              alt="Creative project 4"
+            />
+          </div>
+        </div>
+        <button class="slider-btn next" aria-label="Next Slide">
+          &#10095;
+        </button>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services" aria-label="Our Services">
+      <div class="service-card" tabindex="0">
+        <div class="service-icon">🎨</div>
+        <div class="service-title">Brand Design</div>
+        <div class="service-desc">
+          Crafting unique brand identities that stand out with elegance.
+        </div>
+      </div>
+      <div class="service-card" tabindex="0">
+        <div class="service-icon">💻</div>
+        <div class="service-title">Web Development</div>
+        <div class="service-desc">
+          Building responsive and stunning websites with smooth UX.
+        </div>
+      </div>
+      <div class="service-card" tabindex="0">
+        <div class="service-icon">📱</div>
+        <div class="service-title">App Design</div>
+        <div class="service-desc">
+          User-centric app designs that deliver seamless experiences.
+        </div>
+      </div>
+      <div class="service-card" tabindex="0">
+        <div class="service-icon">📈</div>
+        <div class="service-title">Digital Marketing</div>
+        <div class="service-desc">
+          Driving growth with creative and data-driven marketing strategies.
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section
+      class="testimonials"
+      id="testimonials"
+      aria-label="Client Testimonials"
+    >
+      <h2 class="section-title">What Our Clients Say</h2>
+      <div class="carousel-container">
+        <div class="carousel-slide" id="carouselSlide">
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "zackproject. transformed our brand image completely. The team is
+              very professional and creative."
+            </p>
+            <p class="testimonial-author">- Jessica P.</p>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "Exceptional design quality and excellent communication throughout
+              our project."
+            </p>
+            <p class="testimonial-author">- Mark D.</p>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "Fast turnaround time and stunning website design. Highly
+              recommend!"
+            </p>
+            <p class="testimonial-author">- Sophia R.</p>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "Their marketing strategy helped increase our online presence
+              dramatically."
+            </p>
+            <p class="testimonial-author">- James L.</p>
+          </div>
+        </div>
+        <button class="carousel-btn prev" aria-label="Previous testimonial">
+          &#10094;
+        </button>
+        <button class="carousel-btn next" aria-label="Next testimonial">
+          &#10095;
+        </button>
+        <div class="carousel-indicators" id="carouselIndicators"></div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact" id="contact" aria-label="Contact Form">
+      <h2>Contact Us</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Name *</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          required
+          minlength="3"
+          placeholder="Your Name"
+        />
+
+        <label for="email">Email *</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          placeholder="you@example.com"
+        />
+
+        <label for="message">Message *</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          minlength="10"
+          placeholder="Write your message here"
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1395/1395446.png"
+              alt="CreativeLux Logo"
+            />
+            <h3>zackproject.</h3>
+          </div>
+          <p class="footer-desc">
+            Crafting premium creative solutions with elegance and style. Elevate
+            your brand with our expert team.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p>
+            <strong>Address:</strong> Perum ITB BRP Blok A27, Ngamprah, Bandung
+            Barat, Jawa Barat, Indonesia 40552
+          </p>
+          <p><strong>Email:</strong> ahmadzakky2862@gmail.com</p>
+          <p><strong>Phone:</strong> +62 851-3491-5024</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com/share/14Ps5YT4Qyk/"
+              aria-label="Facebook"
+              ><span><i class="fa-brands fa-facebook-f"></i></span
+            ></a>
+            <a href="https://github.com/ZakNong7" aria-label="Twitter"
+              ><span><i class="fa-brands fa-github"></i></span
+            ></a>
+            <a href="https://www.instagram.com/zaknong7/" aria-label="Instagram"
+              ><span><i class="fa-brands fa-instagram"></i></span
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/ahmad-zakky-nurfauzan-95a230334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              aria-label="LinkedIn"
+              ><span><i class="fa-brands fa-linkedin-in"></i></span
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2023 zackproject. All rights reserved. Designed with passion.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
