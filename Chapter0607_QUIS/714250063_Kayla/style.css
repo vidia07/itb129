@@ -1,40 +1,58 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: beige;
+    background-color: #111;
+    color: #eee;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-nav {
-   display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: center;
     padding: 15px 30px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(20, 20, 20, 0.6);
     backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 10;
 }
 
-nav ul {
+.navbar ul {
     display: flex;
     gap: 20px;
     list-style: none;
 }
 
-nav a {
+.navbar a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
+.navbar a:hover {
+    color: #bbaaff;
+}
+
+/* HERO */
 #hero {
     padding: 150px 20px 80px;
     text-align: center;
 }
 
+.hero-title {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow:
+        2px 2px 5px #8e2cff,
+        0 0 20px #ff33aa,
+        0 0 30px #6e33ff;
+}
+
 #hero button {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 12px 25px;
     background: #4a00e0;
     border: none;
     color: white;
@@ -42,19 +60,63 @@ nav a {
     cursor: pointer;
 }
 
-/* SECTION */
+#hero button:hover {
+    background: #3200a8;
+}
+
+/* SECTIONS */
 section {
-    padding: 80px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
+h2 {
+    margin-bottom: 8px; /* judul lebih dekat ke paragraf */
+}
+section p {
+    margin-top: 5px;
+}
 
-button {
-    padding: 10px 20px;
+/* FEATURE CARDS */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.card {
+    background: #1b1b1b;
+    padding: 25px;
+    border-radius: 12px;
+
+    transition: transform .3s ease,
+                box-shadow .3s ease,
+                background .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(150, 0, 255, 0.35);
+    background: #242424;
+}
+
+.card h3 {
+    color: #bbaaff;
+}
+
+#cta-btn {
+    margin-top: 30px;
+    padding: 12px 25px;
     background: #4a00e0;
     border: none;
     color: white;
     border-radius: 8px;
     cursor: pointer;
+}
+
+#cta-btn:hover {
+    background: #3200a8;
 }
 
 /* RESPONSIVE */
@@ -63,7 +125,7 @@ button {
         height: 200px !important;
     }
 
-    nav ul {
-        display: none;
+    .navbar ul {
+        display: none;
     }
 }
