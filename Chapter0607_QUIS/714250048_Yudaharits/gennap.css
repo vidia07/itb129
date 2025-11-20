@@ -1,0 +1,316 @@
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff49;
+    color: #222;
+    line-height: 1.6;
+    background-image: url('https://i.pinimg.com/736x/9d/7c/af/9d7caf002efa649234adcec4aadb96fc.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Premium color scheme: white, gold, black, silver */
+
+a {
+    text-decoration: none;
+    color: #4970dc; /* blue */
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #4970dc;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.btn-primary {
+    background-color: #4970dc;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #9b7f44;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #4970dc;
+}
+
+/* Portfolio Slider */
+.slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.7);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: #4970dc;
+    transition: background 0.3s;
+    user-select: none;
+}
+
+.slider-btn:hover {
+    background: #b9975b;
+    color: white;
+}
+
+.slider-btn.prev {
+    left: 10px;
+}
+
+.slider-btn.next {
+    right: 10px;
+}
+
+/* Services */
+.services-list {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: #f9f9f997;
+    padding: 30px;
+    border-radius: 12px;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: box-shadow 0.3s;
+}
+
+.service-card:hover {
+    box-shadow: 0 4px 15px rgba(185,149,78,0.3);
+}
+
+.service-card .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #b9975b;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.service-card p {
+    color: #666;
+    font-weight: 400;
+}
+
+/* Testimonials */
+.testimonials-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.testimonials-slider {
+    display: flex;
+    overflow: hidden; 
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+.testi-card {
+    background: #ffffff83;
+    border: 1px solid #d7d7d799;
+    padding: 30px;
+    border-radius: 12px;
+    width: 300px;
+    margin-right: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    flex-shrink: 0;
+    font-style: italic;
+    color: #444;
+}
+
+.testi-card h4 {
+    margin-top: 15px;
+    color: #b9975b;
+    font-style: normal;
+    font-weight: 600;
+    text-align: right;
+}
+
+.testi-btn {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #b9975b;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s;
+    padding: 0 10px;
+}
+
+.testi-btn:hover {
+    color: #9b7f44;
+}
+
+/* Contact Form */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #f4f4f4;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgb(185 149 78 / 0.2);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #222;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #b9975b;
+    outline: none;
+}
+
+.error-message {
+    color: #c0392b;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+}
+
+#formMessage {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #27ae60;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonial-card {
+        width: 80vw;
+    }
+    .slider-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
