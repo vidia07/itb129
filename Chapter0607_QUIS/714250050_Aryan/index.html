@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agensi Kreatif - Halaman Landing Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">WeCreative</div>
+            <ul>
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#services">Layanan</a></li>
+                <li><a href="#portfolio">Portofolio</a></li>
+                <li><a href="#testimonials">Testimoni</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Selamat Datang di Agensi Kreatif Kami</h1>
+                <p>Kami ciptakan desain premium yang meningkatkan merek Anda.</p>
+                <a href="#contact" class="btn">Mulai Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Layanan Kami</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <i class="fas fa-palette"></i>
+                    <h3>Desain Grafis</h3>
+                    <p>Visual menakjubkan yang menangkap visi Anda.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-code"></i>
+                    <h3>Pengembangan Web</h3>
+                    <p>Situs web responsif dibangun dengan teknologi modern.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-video"></i>
+                    <h3>Produksi Video</h3>
+                    <p>Konten sinematik yang menceritakan kisah Anda.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Pemasaran</h3>
+                    <p>Kampanye strategis untuk meningkatkan jangkauan Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Portofolio Kami</h2>
+            <div class="slider">
+                <div class="slides" id="portfolioSlides">
+                    <div class="slide" style="background-image: url('placeholder-male.jpg');"></div>
+                    <div class="slide" style="background-image: url('placeholder-male.jpg');"></div>
+                    <div class="slide" style="background-image: url('placeholder-male.jpg');"></div>
+                </div>
+                <button class="slider-btn prev" onclick="prevSlide()">&#10094;</button>
+                <button class="slider-btn next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Apa Kata Klien Kami</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <p>"Kreativitas dan profesionalisme luar biasa."</p>
+                    <h4>- RehanKebab333</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Mereka memberikan hasil di luar ekspektasi kami."</p>
+                    <h4>- Anak67</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Sangat direkomendasikan untuk layanan premium."</p>
+                    <h4>- BomAtom87</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Nama Anda" required>
+                    <div class="error" id="nameError"></div>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email Anda" required>
+                    <div class="error" id="emailError"></div>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Pesan Anda" rows="5" required></textarea>
+                    <div class="error" id="messageError"></div>
+                </div>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Agensi Kreatif. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
