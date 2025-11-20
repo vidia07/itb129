@@ -1,0 +1,36 @@
+body {
+    margin: 5px;
+    padding: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(https://cdn.pixabay.com/photo/2020/07/18/16/29/coffee-5417663_1280.png);
+    background-position: center;
+}
+
+.menu-card {
+    background-color: rgb(160, 119, 70);
+    width: 100%;
+    box-shadow: 0 10px 20px;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin: 3px;
+}
+
+.line {
+    border: dotted;
+    background: rgb(78, 46, 16);
+}
+
+p {
+    text-align: center;
+}
