@@ -1,0 +1,37 @@
+body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 20px;
+background: linear-gradient(135deg, #11123b, #1a237e);
+}
+
+.section {
+padding: 80px 40px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 40px;
+background: #101031;
+border-radius: 10%;
+}
+
+.card {
+background: #191949;
+padding: 30px;
+width: 300px;
+border-radius: 15px;
+box-shadow: 0 0 15px rgba(245, 242, 242, 0.1);
+transition: 0.3s;
+}
+
+.card:hover {
+transform: translateY(-10px);
+}
+
+.card h3 {
+margin-top: 0;
+margin-bottom: 10px;
+}

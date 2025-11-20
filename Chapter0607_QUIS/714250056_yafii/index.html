@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quis membuat website yafi</title>
+
+  <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #222;
+      --card: #f4f4f4;
+    }
+    body.dark {
+      --bg: #121212;
+      --text: #e8e8e8;
+      --card: #1e1e1e;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    header {
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .toggle-btn {
+      background: none;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8%;
+      min-height: 80vh;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+
+    .hero p {
+      max-width: 350px;
+      opacity: 0.8;
+    }
+
+    .cta-btn {
+      padding: 10px 22px;
+      border: none;
+      background: var(--text);
+      color: var(--bg);
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+      opacity: 0.7;
+    }
+
+    .hero-img {
+      width: 40%;
+      border-radius: 12px;
+    }
+
+    /* Services */
+    .services {
+      padding: 60px 8%;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 10px;
+      transition: transform 0.3s ease, opacity 0.6s;
+      opacity: 0;
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Contact */
+    .contact {
+      padding: 60px 8%;
+      text-align: center;
+    }
+
+    .form input,
+    .form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #bbb;
+      background: var(--card);
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">WebDesigner</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Layanan</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+
+    <button class="toggle-btn" onclick="toggleDark()">🌙</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div>
+      <h1>Desain Web Minimalis & Modern</h1>
+      <p>Kami merancang website estetis, cepat, dan berfokus pada kesederhanaan.</p>
+      <button class="open-tab" data-link="https://www.ebyb.co.id/?gad_source=1&gad_campaignid=23226629016&gbraid=0AAAABBpMHHvMohbKBPtlfu87CifexAx1i&gclid=CjwKCAiAlfvIBhA6EiwAcErpyTYxiAatDsFs1BCKXlx1Fhxmd3KdEHSw_5PDYQhoIP9soRZAARxE3RoCq5IQAvD_BwE">Buka YouTube</button>
+
+
+
+    </div>
+
+    <img class="hero-img" src="https://blog-edutore-partner.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2021/05/28101257/Profesi-Web-Designer_610-x-610-px.png" />
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <h2>Layanan Kami</h2>
+
+    <div class="grid">
+      <div class="card fade"><h3>Landing Page</h3><p>Simpel, efektif, dan elegan.</p></div>
+      <div class="card fade"><h3>Website Bisnis</h3><p>Desain menarik</p></div>
+      
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Kirim pesan ke CS</h2>
+
+    <form class="form">
+      <input type="text" placeholder="Nama" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Pesan" required></textarea>
+      <button class="cta-btn" type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <footer></footer>
+
+  <script>
+    function toggleDark() {
+      document.body.classList.toggle('dark');
+    }
+
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>
