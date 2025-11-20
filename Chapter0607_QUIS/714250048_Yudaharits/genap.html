@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>yuda</title>
+    <link rel="stylesheet" href="gennap.css" />
+</head>
+<body>
+    <!-- Hero Section dengan parallax -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Agensi Kreatif Premium PT Kuali</h1>
+            <p>Mewujudkan ide Anda menjadi karya luar biasa</p>
+            <a href="#services" class="btn-primary">Lihat Layanan Kami</a>
+        </div>
+    </section>
+
+    <!-- Portfolio Slider -->
+    <section class="section">
+        <h2>Portfolio Kami</h2>
+      
+            <div class="slides">
+                <img src="https://i.pinimg.com/736x/35/47/48/354748471cbad482eccf036d1db1a86c.jpg" alt="Project 1" height="400px" />
+                <img src="https://i.pinimg.com/1200x/90/2a/2a/902a2a43b5949965cfc6ebab775d9d0c.jpg" alt="Project 2" height="400px" />
+        </div>
+    </section>
+
+    <!-- Daftar Layanan dengan icon modern -->
+    <section id="services" class="section">
+        <h2>Layanan Kami</h2>
+        <div class="services-list">
+            <div class="service-card">
+                <div class="icon">🎨</div>
+                <h3>Desain Kreatif</h3>
+                <p>Logo, branding, dan visual identity.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">💻</div>
+                <h3>Web & App Development</h3>
+                <p>Membangun website dan aplikasi yang responsif.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">📈</div>
+                <h3>Digital Marketing</h3>
+                <p>Strategi pemasaran digital yang efektif.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni dengan card yang dapat digeser -->
+    <section id="testimonials" class="section">
+        <h2>Testimoni Klien</h2>
+        <div class="testimonials-container">
+            <button class="testi-btn prev">&#10094;</button>
+            <div class="testimonials-slider">
+                <div class="testi-card">
+                    <p>"Kreatif dan profesional, hasil kerja memuaskan!"</p>
+                    <h4>- Andi, CEO Startup</h4>
+                </div>
+                <div class="testi-card">
+                    <p>"Tim yang responsif dan solusi tepat waktu."</p>
+                    <h4>- Sari, Manager Marketing</h4>
+                </div>
+                <div class="testi-card">
+                    <p>"Desainnya elegan dan modern, sangat recommended."</p>
+                    <h4>- Budi, Founder</h4>
+                </div>
+            </div>
+            <button class="testi-btn next">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Form Kontak dengan validasi JavaScript -->
+    <section id="contact" class="section">
+        <h2>Kontak Kami</h2>
+        <form id="contactForm" novalidate>
+            <div class="form-group">
+                <label for="name">Nama</label>
+                <input type="text" id="name" name="name" required />
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+                <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <small class="error-message"></small>
+            </div>
+            <button type="submit" class="btn-primary">Kirim</button>
+        </form>
+        <div id="formMessage"></div>
+    </section>
+
+    <script src="gena.js"></script>
+</body>
+</html>
