@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Assistant Futuristik</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="brand">🤖 ROBO AI </div>
+  <ul class="nav-links">
+    <li><a href="#hero-text">Home</a></li>
+    <li><a href="#features">Fitur</a></li>
+    <li><a href="#video">Demo</a></li>
+    <li><a href="#scrollButton">Mulai</a></li>
+  </ul>
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title" id="typing-text"></h1>
+      <p class="hero-subtitle" id="glow-text">Asisten AI Masa Depan, Siap Membantu Anda</p>
+      <button class="cta-button" onclick="scrollToFeatures()">Mulai Sekarang</button>
+    </div>
+  </section>
+
+  <!-- Fitur Section -->
+  <section id="features" class="features">
+    <h2 class="section-title">Fitur Unggulan</h2>
+    <div class="cards-container">
+      <div class="feature-card">
+        <h3>Smart Scheduling</h3>
+        <p>Atur jadwal otomatis dengan kecerdasan buatan.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Integrasi Aplikasi</h3>
+        <p>Terhubung dengan semua aplikasi favorit Anda.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Manajemen Perangkat</h3>
+        <p>Kontrol perangkat Anda dari satu tempat.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+ <section id="video" class="video-section">
+  <h2 class="section-title">Lihat Cara Kerjanya</h2>
+  <div class="video-container">
+    <iframe width="560" height="315" 
+      src="https://www.youtube.com/embed/Eu5mYMavctM?start=322"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+
+  <!-- Footer & CTA -->
+  <footer class="footer">
+    <p>Siap untuk masa depan? <button class="cta-button" onclick="scrollToHero()">Coba Sekarang</button></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
