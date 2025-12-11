@@ -15,9 +15,11 @@ body {
 }
 
 /* NAVBAR */
+/* NAVBAR (Perbaikan Utama) */
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center; /* <<< Tambahan: Menjajarkan item secara vertikal di tengah */
     padding: 20px 40px;
     position: fixed;
     width: 100%;
@@ -30,10 +32,20 @@ body {
     color: #6d9bff;
     font-size: 1.5rem;
     font-weight: 700;
+    /* Tambahan: Pastikan margin bawaan h2 hilang */
+    margin: 0;
+}
+
+/* Penataan Kontainer Tautan Navigasi */
+.navbar nav {
+    display: flex; /* <<< Tambahan: Menggunakan Flexbox untuk mensejajarkan tautan di dalam <nav> */
+    align-items: center; /* <<< Tambahan: Menjajarkan tautan dan tombol secara vertikal di tengah */
+    gap: 20px; /* <<< Perubahan: Mengganti margin-left pada <a> dengan gap pada <nav> */
 }
 
 .navbar nav a {
-    margin-left: 20px;
+    /* margin-left: 20px; <<< Dihapus/diubah karena menggunakan gap di atas */
+    text-decoration: none; /* Tambahan: Hilangkan garis bawah default */
     color: #c8d2ff;
     transition: 0.3s;
 }
@@ -46,6 +58,27 @@ body {
     padding: 8px 16px;
     border: 1px solid #6d9bff;
     border-radius: 8px;
+    /* Tambahan: Hilangkan garis bawah untuk tombol */
+    text-decoration: none; 
+}
+
+/* RESPONSIVE (Penting untuk Emulator) */
+@media(max-width: 768px) {
+    .navbar {
+        padding: 15px 20px; /* Kurangi padding di layar kecil */
+    }
+
+    .navbar nav {
+        gap: 10px; /* Kurangi jarak antar item di layar kecil */
+    }
+
+    .navbar nav a {
+        font-size: 0.8rem; /* Kurangi ukuran font tautan */
+    }
+
+    .btn-nav {
+        padding: 5px 10px; /* Kurangi ukuran padding tombol */
+    }
 }
 
 /* HERO */
