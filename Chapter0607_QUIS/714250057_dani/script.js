@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. FITUR AUTO SCROLL 
+    // AUTO SCROLL 
     const ctaButton = document.querySelector('.cta-button');
     const targetSection = document.getElementById('cta-section');
 
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Menggulir mulus ke bagian CTA
             targetSection.scrollIntoView({ behavior: 'smooth' });
             
-            // Feedback visual:
+            // Feedback tombol
             ctaButton.textContent = 'Mengakses CTA...';
             setTimeout(() => { 
                 ctaButton.textContent = 'Mulai Sekarang'; 
