@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUIZ</title>
-    <link rel="stylesheet" href="quizPraktikum.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QUIZ</title>
+        <link rel="stylesheet" href="quizPraktikum.css">
+    </head>
+    <header>
+    <nav class="navbar">
+        <div class="logo">QUIZ</div>
+        <ul class="nav-links">
+            <li><a href="#hero"> <h3>HOME</h3> </a></li>
+            <li><a href="#features"> <h3>FARURES</h3> </a></li>
+            <li><a href="#video"> <h3>VIDEO</h3> </a></li>
+        </ul>
+    </nav>
+</header>
 <body>
-
-<section class="hero">
-<h2>ERA BARU TELAH TIBA</h2>
+    
+    <section class="hero" id="hero">
+    <h1>ERA BARU TELAH TIBA</h1>
 <p>Kami merekomendasikan AI sesuai dengan apa yang kalian butuhkan memudahkan Anda untuk mencari suatu informasi</p>
+ <button>
+    <a href="#features"> klik selengkapnya</a>
+ </button>
 </section>
 
 <section class="section" id="features">
     <div class="card">
         <h3>GPT AI</h3>
         <p>Sistem kecerdasan untuk otomatisasi tugas-tugas yang berulang, analisis data, dan memberikan rekomendasi, yang pada akhirnya membantu bisnis beroperasi lebih efisien.</p>
-        </div>
+    </div>
         
         <div class="card">
             <h3>Grammarly</h3>
@@ -28,14 +41,20 @@
             <h3>Perplexity AI</h3>
             <p>Berfungsi seperti mesin pencari yang didukung AI, memberikan jawaban dengan menyertakan referensi atau kutipan, sehingga lebih mudah untuk memverifikasi sumber.</p>
         </div>
-</section>
-
-<section id="video" class="video-section">
+        <div class="card">
+            <h3>Gemini</h3>
+            <p>AI yang membantu anda unntuk berdiskusi, kurang lebih hampir sama dengan GPT</p>
+        </div>
+    </section>
+    
     <h2>Video Singkat</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/-FLvWas27eQ?si=IHCv-wbVPhr0eGNo" 
-    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</section>
+    <section id="video" class="section">
+        <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-FLvWas27eQ?si=IHCv-wbVPhr0eGNo" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
 
 </body>
 </html>
