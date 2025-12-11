@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    background: linear-gradient( to left, white,  rgb(80, 72, 72));
+    font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+    font-weight: normal;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: white;
+
+}
+#top{
+    background-image: url(https://images.unsplash.com/photo-1675198857086-e5a930f36495?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFpJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D);
+    color: aliceblue;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    justify-content: center;
+    text-align: center;
+}
+.fitur-card1 {
+    background-image: url(https://img.freepik.com/premium-vector/set-varicoloured-kitchen-appliances-white-background-vector-illustration-home-appliances-kettle-weights-mixer-toaster-juicer-microwave-multicooker-cartoon-style_744733-1066.jpg?semt=ais_hybrid&w=740&q=80);
+    color: aliceblue;
+    background-position: center ;
+    background-size: auto;
+    padding-top: 20px;
+    padding: 20px;
+}
+#judul {
+    font-size: 50px;
+     font-size: 48px;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.p1 {
+    font-size: 20px;
+}
+.fitur-card2{
+    background-image: url(https://www.shutterstock.com/image-vector/3d-vector-wave-lines-pattern-600nw-2449982891.jpg);
+    color: aliceblue;
+    padding-top: 20px;
+    padding: 20px;
+}
+html{
+    scroll-behavior: smooth
+}
+.fitur-card3{
+    background-image: url(https://img.freepik.com/free-vector/abstract-wavy-background-digital-technology-futuristic-vector-line-design_314614-1631.jpg?semt=ais_incoming&w=740&q=80);
+    color: aliceblue;
+    padding-top: 20px;
+    padding: 20px;
+    text-align: left;
+    font-size: large;
+}
+.fitur-card4{
+    background-image: url(https://img.freepik.com/premium-photo/abstract-grayscale-swirl-light-streaks-motion-blur-effect-dark-background_1247670-12440.jpg);
+    color: aliceblue;
+    padding-top: 20px;
+    padding: 20px;
+}
+.keunggulan{
+    background-image: url(https://img.freepik.com/premium-photo/abstract-dark-background-with-diagonal-light-streaks-particles_1247670-12391.jpg);
+    color: aliceblue;
+    padding-top: 20px;
+    padding: 20px;
+    text-align: left
+}.aboutme {
+    background-image: url(https://img.freepik.com/premium-vector/set-varicoloured-kitchen-appliances-white-background-vector-illustration-home-appliances-kettle-weights-mixer-toaster-juicer-microwave-multicooker-cartoon-style_744733-1066.jpg?semt=ais_hybrid&w=740&q=80);
+    color: aliceblue;
+    padding: 20px;
+    padding-top: 20px
+}
+.kontak {
+    background-image: url(https://img.freepik.com/free-vector/3d-abstract-wave-pattern-background-vector_53876-175338.jpg?semt=ais_hybrid&w=740&q=80);
+    color: rgb(5, 118, 216);
+    padding: 20px;
+    padding-top: 20px;
+}
+.nav-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+}
+.nav-box a {
+  color: #0ff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.nav-box a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #0ff;
+}
+
+.feature > div {
+  background: rgba(49, 49, 49, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+section {
+  animation: fadeIn 1s ease-out;
+}
+
+.video-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 800px;
+  color: #0ff;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.kontak a {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 10px rgba(0,255,255,0.3);
+  color: white;
+}
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buts Creative (Experience)| Premium Agency</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">BUTS CREATIVE (Experience).</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Beranda</a></li>
+            <li><a href="#services">Layanan Kami</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Kontak Kami</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Kami Ciptakan Keajaiban</h1>
+            <p>Agensi kreatif premium untuk brand yang menginginkan standar tertinggi.</p>
+            <button class="btn-gold" onclick="document.getElementById('portfolio').scrollIntoView()">Lihat Karya</button>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">Layanan Kami</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-pen-nib"></i>
+                <h3>Brand Identity</h3>
+                <p>Membangun identitas visual yang kuat, elegan, dan tak terlupakan.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p>Website responsif dengan performa tinggi dan desain minimalis.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-camera"></i>
+                <h3>Photography</h3>
+                <p>Fotografi komersial kelas atas untuk produk dan editorial.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2 class="section-title">Portofolio</h2>
+        <div class="slider-container">
+            <div class="slide fade">
+                <img src="home.jpg" alt="Project 1">
+                <div class="caption">Minimalist Architecture</div>
+            </div>
+            <div class="slide fade">
+                <img src="indoor.jpg" alt="Project 2">
+                <div class="caption">Luxury Interior</div>
+            </div>
+            <div class="slide fade">
+                <img src="download.jpg" alt="Project 3">
+                <div class="caption">Dark Aesthetic Brand</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2 class="section-title">Testimoni Klien Kami</h2>
+        <div class="testimonial-container">
+            <div class="testi-card">
+                <p class="testi-text">"Desain terbaik yang pernah ada. Mengubah image perusahaan kami menjadi lebih premium."</p>
+                <p class="testi-author">— Boss Gadza Yafi</p>
+            </div>
+            <div class="testi-card">
+                <p class="testi-text">"Tim nya kompak. Hasil Codingannya rapi banget."</p>
+                <p class="testi-author">— ITB LORENK 129 Team</p>
+            </div>
+            <div class="testi-card">
+                <p class="testi-text">"Layanan bintang lima. Mereka mengerti visi kami tanpa perlu banyak revisi."</p>
+                <p class="testi-author">— Boss Rafli</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <div class="contact-wrapper">
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Nama Lengkap">
+                    <small class="error-msg" id="error-name">Nama wajib diisi.</small>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Alamat Email">
+                    <small class="error-msg" id="error-email">Email tidak valid.</small>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="5" placeholder="Pesan Anda"></textarea>
+                    <small class="error-msg" id="error-message">Pesan tidak boleh kosong.</small>
+                </div>
+                <button type="submit" class="btn-gold full-width">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Buts Experience. Hak Dan Cipta Dilindungi.</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

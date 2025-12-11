@@ -1,0 +1,29 @@
+{
+  "name": "creative-agency-landing",
+  "version": "1.0.0",
+  "description": "A clean and elegant landing page for a creative agency.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process not defined yet.'"
+  },
+  "keywords": [
+    "creative",
+    "agency",
+    "landing",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Dzulyan Arya Nurfadilah",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "homepage": "https://www.github.com/dzulys",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/dzulys/"
+  }
+}

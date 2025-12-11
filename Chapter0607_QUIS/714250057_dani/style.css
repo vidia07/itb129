@@ -1,0 +1,209 @@
+/* 1. GLOBAL & SETUP */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-neon-primary: #8A2BE6; /* Ungu */
+    --color-neon-secondary: #00FFFF; /* Cyan */
+    --color-dark-bg: #0D1117;
+    --font-futuristic: 'Space Mono', monospace;
+}
+
+body {
+    font-family: var(--font-futuristic);
+    background: var(--color-dark-bg);
+    color: #F8F8F8;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+section {
+    padding: 80px 5%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* 2. HERO SECTION ANIMATION  */
+
+.animated-text {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--color-neon-secondary);
+    text-shadow: 0 0 5px var(--color-neon-secondary), 0 0 15px var(--color-neon-secondary);
+    
+    /* Efek Typing */
+    overflow: hidden; 
+    border-right: .15em solid var(--color-neon-secondary); /* Cursor Neon */
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+        typing 4s steps(20, end) forwards,
+        blink-caret .75s step-end infinite;
+    width: 0; 
+    animation-delay: 0.5s;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--color-neon-secondary); }
+}
+
+.slide-in-text {
+    font-size: 1.2em;
+    margin-top: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s ease-out 4.7s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, var(--color-neon-primary), var(--color-neon-secondary));
+    color: var(--color-dark-bg);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--color-neon-primary);
+}
+
+
+/* 3. FEATURE CARD */
+
+.feature-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: var(--color-neon-primary);
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.interactive-card {
+    /* Glassmorphism Styling */
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(138, 43, 226, 0.3); /* Border Neon */
+    border-radius: 15px;
+    padding: 30px;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    
+    /* Transisi untuk Parallax dikontrol oleh JS, sisanya oleh CSS */
+    transition: box-shadow 0.4s ease-out, transform 0.1s linear; 
+}
+
+.interactive-card:hover {
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.8), /* Bayangan Neon Ungu */
+                0 0 50px rgba(0, 255, 255, 0.4); /* Bayangan Neon Cyan */
+}
+
+
+/* 4. VIDEO SECTION & CTA SECTION */
+
+.video-container {
+    position: relative;
+    width: 80%;
+    padding-top: 45%; /* Rasio 16:9 */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--color-neon-primary); 
+    border: none;
+}
+
+.final-cta-button {
+    /* Mirip dengan cta-button di hero, tapi lebih besar */
+    padding: 15px 40px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background: linear-gradient(90deg, #FF00FF, #00FFFF); /* Gradient berbeda untuk pembeda */
+    color: var(--color-dark-bg);
+    border: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.final-cta-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 20px #FF00FF;
+}
+
+/* 5. RESPONSIVENESS */
+
+@media (max-width: 1024px) {
+    .card-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .interactive-card {
+        flex-basis: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .animated-text {
+        font-size: 2em;
+    }
+    .slide-in-text {
+        font-size: 1em;
+    }
+    .card-container {
+        flex-direction: column;
+    }
+    .interactive-card {
+        flex-basis: 100%;
+    }
+    .video-container {
+        width: 100%;
+        padding-top: 56.25%; /* Rasio 16:9 penuh */
+    }
+}
