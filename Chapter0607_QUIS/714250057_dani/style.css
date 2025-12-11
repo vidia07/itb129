@@ -7,8 +7,8 @@
 }
 
 :root {
-    --color-neon-primary: #8A2BE6; /* Ungu */
-    --color-neon-secondary: #00FFFF; /* Cyan */
+    --color-neon-primary: #8A2BE6;
+    --color-neon-secondary: #00FFFF; 
     --color-dark-bg: #0D1117;
     --font-futuristic: 'Space Mono', monospace;
 }
@@ -43,7 +43,7 @@ section {
     
     /* Efek Typing */
     overflow: hidden; 
-    border-right: .15em solid var(--color-neon-secondary); /* Cursor Neon */
+    border-right: .15em solid var(--color-neon-secondary);
     white-space: nowrap;
     margin: 0 auto;
     letter-spacing: .15em;
@@ -128,7 +128,6 @@ section {
     cursor: pointer;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     
-    /* Transisi untuk Parallax dikontrol oleh JS, sisanya oleh CSS */
     transition: box-shadow 0.4s ease-out, transform 0.1s linear; 
 }
 
@@ -143,7 +142,7 @@ section {
 .video-container {
     position: relative;
     width: 80%;
-    padding-top: 45%; /* Rasio 16:9 */
+    padding-top: 45%;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -160,11 +159,10 @@ section {
 }
 
 .final-cta-button {
-    /* Mirip dengan cta-button di hero, tapi lebih besar */
     padding: 15px 40px;
     font-size: 1.2em;
     cursor: pointer;
-    background: linear-gradient(90deg, #FF00FF, #00FFFF); /* Gradient berbeda untuk pembeda */
+    background: linear-gradient(90deg, #FF00FF, #00FFFF);
     color: var(--color-dark-bg);
     border: none;
     border-radius: 50px;
@@ -204,6 +202,6 @@ section {
     }
     .video-container {
         width: 100%;
-        padding-top: 56.25%; /* Rasio 16:9 penuh */
+        padding-top: 56.25%;
     }
 }
