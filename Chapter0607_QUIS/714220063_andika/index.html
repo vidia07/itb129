@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guwra AI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="https://www.pngmart.com/files/23/Gawr-Gura-PNG-Isolated-Image.png" alt="Guwra AI Logo" class="logo" />
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#video">Video</a></li>
+        </ul>
+        <div class="nav-right">
+            <button id="chatBtn" class="chat-btn">Chat</button>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="glow-text">Guwra AI</h1>
+                <p class="subtitle">Your Future AI Assistant</p>
+                <p class="hero-description">
+                    Guwra AI is an advanced AI assistant that understands context, learns your preferences, and provides personalized help for tasks, information, and schedule management.
+                </p>
+                <button class="cta" onclick="scrollToSection('features')">Explore Features</button>
+            </div>
+            <div class="hero-image">
+                <img src="https://static.wikitide.net/hololivewiki/thumb/6/69/Gawr_Gura_-_Portrait_01.png/800px-Gawr_Gura_-_Portrait_01.png" alt="Guwra AI Character">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Futuristic Features</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-comment-dots"></i>
+                </div>
+                <h3>Smart Responses</h3>
+                <p>Advanced AI that understands context and provides intelligent, relevant responses to your queries.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-microphone-alt"></i>
+                </div>
+                <h3>Voice Interaction</h3>
+                <p>Natural voice recognition and synthesis for seamless hands-free interaction with your AI assistant.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3>Real-Time Processing</h3>
+                <p>Lightning-fast processing capabilities that deliver instant results and real-time assistance.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Adaptive Learning</h3>
+                <p>Continuously learns from your interactions to provide increasingly personalized and accurate assistance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="video" class="video-section">
+        <h2>Watch How It Works</h2>
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/5M6aZVQ0-aA"
+        allowfullscreen>
+    </iframe>
+    </section>
+
+    <script src="guwra.js"></script>
+</body>
+</html>

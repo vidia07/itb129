@@ -1,0 +1,474 @@
+/* 1. Variabel Warna Premium */
+:root {
+  --color-primary: #0a0a0a; /* Black / Dark Charcoal */
+  --color-secondary: #c8a35c; /* Elegant Gold */
+  --color-text-light: #f5f5f5; /* Near White */
+  --color-text-dark: #333333; /* Dark Grey for contrast */
+  --color-bg-dark: #151515; /* Darker Background */
+  --font-primary: "Montserrat", sans-serif; /* Font tegas */
+  --font-secondary: "Playfair Display", serif; /* Font elegan untuk judul */
+}
+
+/* Base Styles & Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: var(--color-text-dark);
+  background-color: var(--color-text-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 3em;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 2.5em;
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 50px;
+}
+
+/* Premium Text Styles */
+strong {
+  color: var(--color-secondary);
+}
+
+.bg-dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+}
+
+.bg-dark h3 {
+  color: var(--color-secondary);
+}
+
+.subtitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 1.1em;
+  opacity: 0.8;
+}
+
+/* Tombol (Button) */
+.btn-cta {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+  transition: background-color 0.3s, transform 0.3s;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.btn-cta:hover {
+  background-color: #f7d291; /* Lighten Gold on hover */
+  transform: translateY(-2px);
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* 2. Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(10, 10, 10, 0.95); /* Semi-transparent black */
+  color: var(--color-text-light);
+  padding: 15px 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-secondary);
+  font-size: 1.8em;
+  letter-spacing: 4px;
+  color: var(--color-secondary);
+}
+
+.nav-links a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: 500;
+  opacity: 0.7;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: var(--color-secondary);
+}
+
+.btn-cta-nav {
+  border: 1px solid var(--color-secondary);
+  padding: 8px 15px;
+  font-size: 0.9em;
+  opacity: 1 !important;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* 3. Hero Section (Parallax/Smooth Anim) */
+.hero-section {
+  height: 100vh;
+  background: url("atu.avif") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  /* Efek Parallax: background-attachment: fixed; akan ditambahkan via JS */
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Overlay gelap */
+}
+
+.hero-content {
+  position: relative;
+  color: var(--color-text-light);
+  max-width: 800px;
+  animation: fadeInDown 1s ease-out; /* Smooth Animation */
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content .tagline {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.hero-content h2 {
+  font-size: 4.5em;
+  margin-bottom: 40px;
+}
+
+/* 4. Portfolio Slider (Skeleton) */
+.portfolio-slider {
+  display: flex;
+  overflow-x: scroll; /* Untuk swipe manual */
+  scroll-snap-type: x mandatory;
+  margin-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
+  gap: 30px;
+  padding-bottom: 20px;
+}
+
+.slide {
+  flex: 0 0 400px; /* Lebar setiap slide */
+  scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.slide:hover {
+  transform: translateY(-5px);
+}
+
+.slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-info {
+  padding: 15px;
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.slide-info h4 {
+  font-family: var(--font-secondary);
+  color: var(--color-secondary);
+  margin-bottom: 5px;
+}
+
+.slider-controls {
+  text-align: center;
+}
+
+.slider-controls button {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background 0.3s;
+}
+
+.slider-controls button:hover {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+/* 5. Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.service-item {
+  background-color: var(--color-bg-dark); /* Keep dark background */
+  padding: 30px;
+  border: 1px solid rgba(200, 163, 92, 0.2);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.service-item:hover {
+  background-color: #222;
+  border-color: var(--color-secondary);
+}
+
+.service-item i {
+  font-size: 3em;
+  color: var(--color-secondary);
+  margin-bottom: 15px;
+}
+
+.service-item h4 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 1.3em;
+  color: var(--color-text-light);
+}
+
+/* 6. Testimonials (Skeleton for Card Scroll) */
+.testimonial-slider {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 30px;
+  padding: 20px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.testi-card {
+  flex: 0 0 350px;
+  scroll-snap-align: start;
+  background-color: var(--color-text-light);
+  border: 1px solid #eee;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.testi-card p {
+  font-family: var(--font-secondary);
+  font-style: italic;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+.client-info {
+  border-top: 1px solid var(--color-secondary);
+  padding-top: 10px;
+  display: block;
+  font-size: 0.9em;
+}
+
+.client-name {
+  font-weight: 700;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: 3px;
+}
+
+.client-title {
+  color: var(--color-secondary);
+  font-style: normal;
+}
+
+/* 7. Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #444;
+  background-color: #222;
+  color: var(--color-text-light);
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.9em;
+  display: block;
+  margin-top: 5px;
+}
+
+/* 8. Footer */
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+/* --- Responsiveness (Mobile & Tablet) --- */
+@media (max-width: 1024px) {
+  .nav-links a {
+    margin-left: 20px;
+  }
+
+  .hero-content h2 {
+    font-size: 3.5em;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar Mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 10px 20px;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(200, 163, 92, 0.1);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hero Mobile */
+  .hero-section {
+    height: 80vh;
+  }
+
+  .hero-content h2 {
+    font-size: 2.5em;
+  }
+
+  /* Sections Mobile */
+  h3 {
+    font-size: 2em;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slide {
+    flex: 0 0 80vw; /* Lebih lebar di mobile */
+  }
+
+  .testi-card {
+    flex: 0 0 90vw;
+  }
+}

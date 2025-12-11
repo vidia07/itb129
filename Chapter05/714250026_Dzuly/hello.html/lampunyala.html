@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atribut JavaScript - Lampu On Off</title>
+
+</head>
+<body>
+
+  <h2>Apa yang bisa dilakukan oleh JavaScript?</h2>
+  <p>JavaScript bisa mengganti atribut dari value.</p>
+  <p>Studi kasus: JavaScript mengubah atribut <b>src</b> dari sebuah gambar bola lampu.</p>
+  <p>Note* Saya menggunakan script lalu diisi dengan function untuk memanggil image lampu on/off</p>
+
+  <!-- Gambar lampu -->
+  <img id="lampu" src="https://png.pngtree.com/png-vector/20240208/ourmid/pngtree-light-bulb-turn-off-to-save-electrical-png-image_11720435.png"
+         alt="Lampu Mati"> <!--Alternatif kalau lampunya mati (misal)-->
+
+  <!-- Tombol untuk nyalakan dan matikan lampu -->
+  <div>
+    <button onclick="nyalakanLampu()">Nyalakan Lampunya</button>
+    <button onclick="matikanLampu()">Matikan Lampunya</button>
+  </div>
+
+  <script>
+    function nyalakanLampu() {
+      document.getElementById("lampu").src = "https://png.pngtree.com/png-vector/20250118/ourmid/pngtree-glowing-light-bulb-symbolizing-ideas-and-creativity-png-image_15261964.png";
+    }
+
+    function matikanLampu() {
+      document.getElementById("lampu").src = "https://png.pngtree.com/png-vector/20240208/ourmid/pngtree-light-bulb-turn-off-to-save-electrical-png-image_11720435.png";
+    }
+  </script>
+
+</body>
+</html>
