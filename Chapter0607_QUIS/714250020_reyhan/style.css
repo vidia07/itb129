@@ -219,3 +219,147 @@ footer {
 }
 
 .footer-info p { color: var(--color-secondary); }
+/* =====================================
+   HERO TEXT ANIMATION
+===================================== */
+.hero-content h1 {
+    animation: revealTitle 1s ease-out forwards;
+    opacity: 0;
+}
+
+.hero-content p {
+    animation: revealText 1s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+.hero-content .btn {
+    animation: revealButton 1s ease-out 0.6s forwards;
+    opacity: 0;
+}
+
+@keyframes revealTitle {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes revealText {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes revealButton {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* =====================================
+   NAVBAR LINK ANIMATION
+===================================== */
+.nav-bar ul li a {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-bar ul li a::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(90deg, #5028c9, #b98910);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.nav-bar ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* =====================================
+   SERVICE CARD HOVER
+===================================== */
+.service-item {
+    transition: all 0.4s ease;
+    border-radius: 12px;
+}
+
+.service-item:hover {
+    transform: translateY(-15px) rotate(0.5deg);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* =====================================
+   IMAGE CATALOG ANIMATION
+===================================== */
+.work-item img {
+    transition: transform 0.6s ease;
+}
+
+.work-item:hover img {
+    transform: scale(1.12);
+}
+
+/* Overlay Text Effect */
+.work-meta {
+    transform: translateY(100%);
+    transition: 0.5s cubic-bezier(.32,.01,.34,.99);
+}
+
+.work-item:hover .work-meta {
+    transform: translateY(0);
+}
+
+/* =====================================
+   BUTTON EFFECT
+===================================== */
+.primary-cta {
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.primary-cta:hover {
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #5028c9, #b98910);
+}
+
+/* =====================================
+   FOOTER APPEAR
+===================================== */
+footer {
+    animation: footerFade 1.5s ease;
+}
+
+@keyframes footerFade {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================================
+   SCROLL ANIMATION SUPPORT
+===================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =====================================
+   RESPONSIVE SAFETY
+===================================== */
+@media(max-width: 768px) {
+    .service-item:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .primary-cta:hover {
+        letter-spacing: normal;
+    }
+}

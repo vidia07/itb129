@@ -1,11 +1,45 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(103, 103, 185, 0.64);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* bagian home...video menjadi kesamping*/
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    text-decoration: #171a41;
+}
+
+/* Jika di atasnya ada kursor maka akan berubah warna di bagian home, features, video */
+.nav-links li a:hover {
+    color: #cdcde4;
+}
+
 body {
 display: flex;
 flex-direction: column;
-justify-content: center;
 align-items: center;
 text-align: center;
 padding: 20px;
-background: linear-gradient(135deg, #11123b, #1a237e);
+background: linear-gradient(135deg, #acadcc, #171a41);
+padding-top: 300px; /* jarak antara header */
 }
 
 .section {
@@ -14,16 +48,16 @@ display: flex;
 justify-content: center;
 flex-wrap: wrap;
 gap: 40px;
-background: #101031;
+background: #252b47;
 border-radius: 10%;
 }
 
 .card {
-background: #191949;
+background: #cdcde4;
 padding: 30px;
 width: 300px;
 border-radius: 15px;
-box-shadow: 0 0 15px rgba(245, 242, 242, 0.1);
+box-shadow: 0 0 15px rgba(245, 242, 242, 0.274);
 transition: 0.3s;
 }
 
@@ -31,7 +65,14 @@ transition: 0.3s;
 transform: translateY(-10px);
 }
 
-.card h3 {
-margin-top: 0;
-margin-bottom: 10px;
+/* pemisah navbar dan section*/
+button {
+    background-color:#acadcc;
+    margin-bottom: 300px;
+}
+
+/* tulisan dri klik selengkapnya*/
+a {
+    text-decoration: none;
+    color:#171a41;
 }
