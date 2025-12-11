@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visonix Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">Visonix Studio</div>
+            <ul>
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Layanan</a></li>
+                <li><a href="#testimonials">Testimoni</a></li>
+                <li><a href="#contact" class="cta-nav">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1 class="heading-gold">Visonix Studio<br>Premium Photography Agency</h1>
+            <p>Mengabadikan Momen Menjadi Karya Visual yang Berkesan.</p>
+            <a href="#contact" class="btn btn-gold">Mulai Proyek Anda</a>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <h2> Beberapa Jepretan Kami</h2>
+            <div class="portfolio-slider">
+                <div class="portfolio-item"><img src="tesal.jpg" alt="Project 1"></div>
+                <div class="portfolio-item"><img src="wisuda.jpg" alt="Project 2"></div>
+                <div class="portfolio-item"><img src="tesal2.jpg" alt="Project 3"></div>
+                <div class="portfolio-item"><img src="oreo.jpg" alt="Project 4"></div>
+            </div>
+            <div class="slider-nav">
+                <button id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button id="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2> Layanan Kami</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-palette service-icon"></i>
+                    <h3>Foto Produk</h3>
+                    <p>Foto makanan yang menggugah selera untuk restoran, café, dan brand kuliner.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-laptop-code service-icon"></i>
+                    <h3>Video Grafhy</h3>
+                    <p>Dokumentasi profesional untuk acara perusahaan, seminar, gathering, pesta, atau pernikahan.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-camera service-icon"></i>
+                    <h3>Foto Grafhy</h3>
+                    <p>Memperkuat citra produk Anda melalui foto yang bersih, tajam, dan estetis. Cocok untuk katalog, marketplace, dan kampanye digital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="testimonials" class="section-padding background-dark">
+        <div class="container">
+            <h2 class="text-gold"> Apa Kata Klien Kami</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <p class="quote">"Kerja sama yang luar biasa! Hasilnya melebihi ekspektasi, sangat premium dan profesional."</p>
+                    <p class="client-name">- Bapak Saepuloh, CEO</p>
+                </div>
+                 <div class="testimonial-card">
+                    <p class="quote">"Desain bersih dan elegan. Tim sangat responsif dan memahami visi kami sepenuhnya."</p>
+                    <p class="client-name">- Ibu Euis, Marketing Director</p>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nama Anda:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan Anda:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message" id="message-error"></span>
+                </div>
+                <button type="submit" class="btn btn-gold">Kirim Pesan</button>
+            </form>
+            <p id="success-message" class="success-message"></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Visonix Studio. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
