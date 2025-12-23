@@ -1,0 +1,75 @@
+/* ===== KHUSUS HALAMAN LIST / INDEX ===== */
+
+/* Kembalikan layout normal */
+body {
+  display: block;
+}
+
+/* Bungkus otomatis konten list */
+header,
+nav,
+table,
+p {
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+/* Judul */
+header h3 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* Nav */
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #a94442;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+th {
+  background: #a94442;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Aksi */
+td a {
+  color: #a94442;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+/* Total */
+p {
+  font-weight: 600;
+}
+/* ===== TAMBAHAN FULL BORDER (LIST MABA) ===== */
+
+/* border luar tabel */
+table {
+  border: 2px solid #0b0a0a;
+}
+
+/* border semua sel */
+th,
+td {
+  border: 1px solid #0b0a0a;
+}
