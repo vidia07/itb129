@@ -1,0 +1,49 @@
+/* ===== KHUSUS FORM EDIT ===== */
+
+/* Matikan flex hanya untuk halaman edit */
+body {
+  display: block;
+}
+
+/* Rapikan form edit */
+form {
+  background: #fff;
+  width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+fieldset {
+  border: none;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background: #a94442;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
