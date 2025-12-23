@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h3>Formulis Pendaaftran Mahasiswa Baru | ULBI</h3>
+        <h3>Formulir Pendaaftran Mahasiswa Baru | ULBI</h3>
     </header>    
 
     <form action="proses-daftar.php" method="POST">
@@ -42,6 +42,7 @@
             <p>
                 <input type="submit" value="Daftar" name="daftar"/>
             </p>
+        </fieldset>
     </form>
 </body>
 </html>
