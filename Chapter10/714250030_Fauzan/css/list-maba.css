@@ -1,0 +1,115 @@
+/* Pengaturan Umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Kontainer Utama */
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+header h3 {
+    color: #1a73e8;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Tombol Tambah Data */
+nav {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #219150;
+}
+
+/* Styling Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Menghilangkan celah antar border */
+    margin-bottom: 20px;
+}
+
+table thead tr {
+    background-color: #1a73e8;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+table th, table td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Warna selang-seling (zebra) */
+}
+
+table tbody tr:hover {
+    background-color: #f1f4f9; /* Efek highlight saat kursor lewat */
+}
+
+/* Link Aksi (Edit & Hapus) */
+table td a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+table td a[href*="form-edit"] {
+    color: #1a73e8;
+    border: 1px solid #1a73e8;
+}
+
+table td a[href*="form-edit"]:hover {
+    background-color: #1a73e8;
+    color: white;
+}
+
+table td a[href*="hapus"] {
+    color: #d93025;
+    border: 1px solid #d93025;
+    margin-left: 5px;
+}
+
+table td a[href*="hapus"]:hover {
+    background-color: #d93025;
+    color: white;
+}
+
+/* Total Data */
+.total-data {
+    font-weight: 600;
+    color: #5f6368;
+    font-size: 1rem;
+}
