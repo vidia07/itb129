@@ -8,17 +8,16 @@ if (isset($_POST['daftar'])) {
     // ambil data dari formulir
     $nama = $_POST['nama'];
     $alamat = $_POST['alamat'];
-    $jk = $_POST['jenis_kelamin'];
+    $jenis_kelamin = $_POST['jenis_kelamin'];
     $agama = $_POST['agama'];
-    $sekolah = $_POST['sekolah_asal'];
+    $sekolah = $_POST['asal_sekolah'];
 
     // buat query
-    $sql = "INSERT INTO pendaftaran (nama, alamat, jenis_kelamin, agama, sekolah_asal)
-            VALUE ('$nama', '$alamat', '$jk', '$agama', '$sekolah')";
-    $query = mysqli_query($db, $sql);
+    $sql = "INSERT INTO pendaftaran (nama, alamat, jenis_kelamin, agama, asal_sekolah) VALUES ('$nama', '$alamat', '$jenis_kelamin', '$agama', '$sekolah')";
+    $query = mysqli_query($database, $sql);
 
     // apakah query simpan berhasil?
-    if ($query) {
+    if( $query ) {
         // kalau berhasil alihkan ke halaman index.php dengan status=sukses
         header('Location: index.php?status=sukses');
     } else {

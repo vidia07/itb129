@@ -1,0 +1,158 @@
+/* Pengaturan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #1a202c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    /* Memberikan tekstur halus pada background */
+    background-image: radial-gradient(#00306008 2px, transparent 2px);
+    background-size: 30px 30px;
+}
+
+/* Container Formulir (Card) */
+.form-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 48, 96, 0.1);
+    /* Garis Orange khas ULBI di bagian atas */
+    border-top: 8px solid #F37021;
+}
+
+/* Header ULBI */
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h3 {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #F37021; /* Orange aksen */
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+header h1 {
+    color: #003060; /* Navy ULBI */
+    font-size: 28px;
+    font-weight: 800;
+    display: inline-block;
+    position: relative;
+}
+
+/* Styling Elemen Formulir */
+form fieldset {
+    border: none;
+}
+
+.input-group {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #003060;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #2d3748;
+    transition: all 0.3s ease;
+    background: #fdfdfd;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #F37021; /* Fokus ke Orange */
+    box-shadow: 0 0 0 4px rgba(243, 112, 33, 0.1);
+    background: #fff;
+}
+
+/* Radio Button Styling */
+.radio-group {
+    display: flex;
+    gap: 25px;
+    margin-top: 5px;
+}
+
+.radio-group label {
+    text-transform: none;
+    font-weight: 500;
+    color: #4a5568;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: normal;
+}
+
+input[type="radio"] {
+    accent-color: #F37021; /* Warna dot radio mengikuti orange ULBI */
+    transform: scale(1.2);
+}
+
+/* Tombol Submit ULBI */
+input[type="submit"] {
+    width: 100%;
+    background: #003060; /* Navy sebagai warna tombol utama */
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(0, 48, 96, 0.2);
+}
+
+input[type="submit"]:hover {
+    background: #F37021; /* Berubah ke Orange saat hover */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(243, 112, 33, 0.3);
+}
+
+/* Link Kembali */
+.nav-link {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #718096;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #d4ca0d;
+    text-decoration: underline;
+}
