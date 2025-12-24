@@ -26,7 +26,8 @@ if (mysqli_num_rows($query) < 1) {
 <head>
     <meta charset="UTF-8">
     <title>Form Edit Mahasiswa</title>
-    <link rel="stylesheet" href="css/edit.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="edit.css">
 </head>
 <body>
 
@@ -40,6 +41,11 @@ if (mysqli_num_rows($query) < 1) {
             <p>
                 <label>Nama</label>
                 <input type="text" name="nama" value="<?= $siswa['nama']; ?>" required>
+            </p>
+
+            <p>
+                <label>Email</label>
+                <textarea name="email" required><?= $siswa['email']; ?></textarea>
             </p>
 
             <p>
@@ -68,8 +74,8 @@ if (mysqli_num_rows($query) < 1) {
             </p>
 
             <p>
-                 <label>Sekolah Asal</label>
-                <input type="text" name="sekolah_asal" value="<?= $siswa['asal_sekolah']; ?>" required>
+                <label>Sekolah Asal</label>
+                <input type="text" name="sekolah_asal" value="<?= $siswa['sekolah_asal']; ?>" required>
             </p>
 
             <p>
