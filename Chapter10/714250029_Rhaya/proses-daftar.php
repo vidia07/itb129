@@ -10,15 +10,14 @@ if (isset($_POST['daftar'])) {
     $alamat = $_POST['alamat'];
     $jenis_kelamin = $_POST['jenis_kelamin'];
     $agama = $_POST['agama'];
-    $asal_sekolah = $_POST['asal_sekolah'];
+    $sekolah = $_POST['asal_sekolah'];
 
     // buat query
-    $sql = "INSERT INTO pendaftaran (nama, alamat, jenis_kelamin, agama, asal_sekolah)
-            VALUE ('$nama', '$alamat', '$jenis_kelamin', '$agama', '$asal_sekolah')";
-    $query = mysqli_query($db, $sql);
+    $sql = "INSERT INTO pendaftaran (nama, alamat, jenis_kelamin, agama, asal_sekolah) VALUES ('$nama', '$alamat', '$jenis_kelamin', '$agama', '$sekolah')";
+    $query = mysqli_query($database, $sql);
 
     // apakah query simpan berhasil?
-    if ($query) {
+    if( $query ) {
         // kalau berhasil alihkan ke halaman index.php dengan status=sukses
         header('Location: index.php?status=sukses');
     } else {
