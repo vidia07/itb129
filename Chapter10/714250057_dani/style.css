@@ -1,0 +1,112 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Navigasi & Tombol */
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-tambah { 
+    background: #3498db; 
+    color: white; 
+    margin-bottom: 20px; 
+}
+
+.btn-tambah:hover { 
+    background: #2980b9; 
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th { 
+    background-color: #34495e; 
+    color: white; 
+}
+
+tr:nth-child(even) { 
+    background-color: #f9f9f9; 
+}
+
+/* Form */
+label { 
+    font-weight: bold; 
+    display: block; 
+    margin-top: 15px; 
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    width: 100%;
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn-submit:hover { 
+    background: #219150; 
+}
+
+.btn-edit { 
+    color: #2980b9; 
+    text-decoration: none; 
+}
+
+.btn-hapus { 
+    color: #e74c3c; 
+    text-decoration: none; 
+}
